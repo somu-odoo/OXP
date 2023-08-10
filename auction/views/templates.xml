@@ -4,6 +4,7 @@
             <html>
                 <head>
                     <t t-call-assets="auction.assets_auction"/>
+                    <link rel="stylesheet" src="auction/static/src/css/auction.css"/>
                 </head>
                 <body>
                 </body>

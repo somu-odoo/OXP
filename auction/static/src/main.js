@@ -1,6 +1,19 @@
 /** @odoo-module **/
 
 import { browser } from "@web/core/browser/browser";
+import { mount } from "@odoo/owl";
+import { templates } from "@web/core/assets";
+import { Auction } from "./auction";
+
+// The following code ensures that owl mount the component when ready.
+// `templates` contains templates contained in the bundles.
+//
+// In the mount options, it's also possible to add other interresting
+// configuration: https://github.com/odoo/owl/blob/master/doc/reference/app.md#configuration
+
+owl.whenReady( () => {
+    mount(Auction, document.body, { templates, dev: true });
+});
 
 /**
  * This code is iterating over the cause property of an error object to console.error a string
