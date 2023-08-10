@@ -1,0 +1,13 @@
+<odoo>
+    <data>
+          <template id="auction.root" name="Auction House">
+            <html>
+                <head>
+                    <t t-call-assets="auction.assets_auction"/>
+                </head>
+                <body>
+                </body>
+            </html>
+          </template>
+    </data>
+</odoo>
