@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "auction",
+    'name': "Auction",
 
     'summary': """
         Play with Owl in this Auction module""",
@@ -9,7 +9,7 @@
         Play with Owl in this auction module
     """,
 
-    'author': "Soumya",
+    'author': "Soumya Mukherjee,Mohammed Shekha",
     'website': "https://www.odoo.com",
 
     'category': 'Productivity',
@@ -20,6 +20,7 @@
     'installable': True,
     'data': [
         'views/templates.xml',
+        'views/auction_views.xml',
     ],
     'assets': {
         'auction.assets_auction': [
