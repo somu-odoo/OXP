@@ -3,7 +3,9 @@
 
     <t t-name="auction.container" owl="1">
         <div class="container">
-            <t t-component="props.component" t-props="props.mainScreenProps" t-key="props.tname" />
+            <main>
+                <t t-component="props.component" t-props="props.mainScreenProps" t-key="props.tname" />
+            </main>
         </div>
     </t>
 </templates>

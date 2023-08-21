@@ -2,8 +2,16 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.header" owl="1">
-        <div class="p-3">
-            hello world
+        <div class="row p-3">
+            <div class="col-3">
+                <img src="/auction/static/src/img/logo.png" />
+            </div>
+            <div class="col-6 pt-4">
+                <input type="input" class="o_input_search"/>
+            </div>
+            <div class="col-3 pt-4">
+                <div><a class="" href="#">About US</a></div>
+            </div>
         </div>
     </t>
 </templates>
