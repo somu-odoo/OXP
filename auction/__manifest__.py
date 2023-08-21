@@ -19,6 +19,7 @@
     'application': True,
     'installable': True,
     'data': [
+        'security/ir.model.access.csv',
         'views/templates.xml',
         'views/auction_views.xml',
     ],
