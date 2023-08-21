@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
 
-    <t t-name="auction.footer" owl="1">
+    <t t-name="auction.AuctionList" owl="1">
         <div class="p-3">
-            This is Footer
+            Auction List
         </div>
     </t>
 </templates>

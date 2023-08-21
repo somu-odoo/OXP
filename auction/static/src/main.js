@@ -1,7 +1,7 @@
 /** @odoo-module **/
 
 import { browser } from "@web/core/browser/browser";
-import { mount } from "@odoo/owl";
+import { mount, EventBus } from "@odoo/owl";
 import { templates } from "@web/core/assets";
 import { Auction } from "./auction";
 
@@ -12,7 +12,9 @@ import { Auction } from "./auction";
 // configuration: https://github.com/odoo/owl/blob/master/doc/reference/app.md#configuration
 
 owl.whenReady( () => {
-    mount(Auction, document.body, { templates, dev: true });
+    const bus = new EventBus();
+    const env = { bus };
+    mount(Auction, document.body, { templates, dev: true, env });
 });
 
 /**

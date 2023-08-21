@@ -3,7 +3,7 @@
 
     <t t-name="auction.root" owl="1">
         <Header/>
-        <Body/>
+        <Container tname="mainScreen.name" component="mainScreen.component" mainScreenProps="mainScreenPropsFielded"/>
         <Footer/>
     </t>
 </templates>
