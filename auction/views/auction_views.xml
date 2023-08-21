@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_auction_url" model="ir.actions.act_url">
+            <field name="name">Auction</field>
+            <field name="url">/auction</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_auction" name="Auction" action="action_auction_url" />
+    </data>
+</odoo>

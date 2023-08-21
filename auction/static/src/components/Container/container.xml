@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="auction.container" owl="1">
+        <div class="container">
+            <t t-component="props.component" t-props="props.mainScreenProps" t-key="props.tname" />
+        </div>
+    </t>
+</templates>

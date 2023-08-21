@@ -2,8 +2,8 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.root" owl="1">
-        <div class="p-3">
-            hello world
-        </div>
+        <Header/>
+        <Container tname="mainScreen.name" component="mainScreen.component" mainScreenProps="mainScreenPropsFielded"/>
+        <Footer/>
     </t>
 </templates>
