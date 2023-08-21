@@ -2,8 +2,10 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.AuctionList" owl="1">
-        <div class="p-3">
-            Auction List
+        <div class="row">
+            <t t-foreach="auctionItems" t-as="auctionItem" t-key="auctionItem.id">
+                <AuctionItem auctionItem="auctionItem"/>
+            </t>
         </div>
     </t>
 </templates>

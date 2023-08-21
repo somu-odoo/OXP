@@ -42,6 +42,7 @@
             'web/static/src/core/browser/browser.js',
             'web/static/src/core/registry.js',
             'web/static/src/core/assets.js',
+
             'auction/static/src/**/*',
             'auction/static/src/auction.css',
         ],

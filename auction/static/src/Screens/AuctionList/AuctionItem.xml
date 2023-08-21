@@ -2,8 +2,8 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.AuctionItem" owl="1">
-        <div class="p-3">
-            Auction Item
+        <div class="col-3">
+            <div t-out="props.auctionItem.name"></div>
         </div>
     </t>
 </templates>
