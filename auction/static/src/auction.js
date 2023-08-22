@@ -5,7 +5,7 @@ import { Header } from "./components/Header/header";
 import { Container } from "./components/Container/container";
 import { Footer } from "./components/Footer/footer";
 
-import { AuctionList } from "./Screens/AuctionList/AuctionList";
+import { AuctionListContainer } from "./Screens/AuctionListContainer/AuctionListContainer";
 
 
 export class Auction extends Component {
@@ -13,7 +13,7 @@ export class Auction extends Component {
 
     setup() {
         super.setup()
-        this.mainScreen = useState({ name: 'AuctionList', component: AuctionList });
+        this.mainScreen = useState({ name: 'AuctionList', component: AuctionListContainer });
         this.env.bus.addEventListener("change_screen", this.onChangeScreen);
         this.mainScreenProps = {};
     }

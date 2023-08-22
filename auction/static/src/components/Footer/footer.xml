@@ -2,8 +2,8 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.footer" owl="1">
-        <div class="p-3">
-            This is Footer
-        </div>
+        <footer class="o_footer">
+            <div class="text-center">© 2023 Odoo S.A. All Rights Reserved</div>
+        </footer>
     </t>
 </templates>

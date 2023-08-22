@@ -1,12 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+
+        <record id="auction_auction_view_tree" model="ir.ui.view">
+            <field name="name">auction.auction.tree</field>
+            <field name="model">auction.auction</field>
+            <field name="arch" type="xml">
+                <tree string="Auction">
+                    <field name="name"/>
+                    <field name="brand_id"/>
+                    <field name="categ_id"/>
+                    <field name="bid_price"/>
+                    <field name="current_bid_price"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="auction_auction_view_form" model="ir.ui.view">
+            <field name="name">auction.auction.form</field>
+            <field name="model">auction.auction</field>
+            <field name="arch" type="xml">
+                <form string="Auction">
+                    <sheet>
+                        <div class="o_employee_avatar">
+                            <field name="image_1920" widget="image" class="oe_avatar m-0" options="{'zoom': true, 'preview_image':'avatar_128'}"/>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="brand_id"/>
+                                <field name="categ_id"/>
+                            </group>
+                            <group>
+                                <field name="bid_price"/>
+                                <field name="current_bid_price"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_auctions" model="ir.actions.act_window">
+            <field name="name">Auction</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">auction.auction</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
         <record id="action_auction_url" model="ir.actions.act_url">
             <field name="name">Auction</field>
             <field name="url">/auction</field>
             <field name="target">new</field>
         </record>
 
-        <menuitem id="menu_auction" name="Auction" action="action_auction_url" />
+        <menuitem id="auction_menu_root"
+            name="Auction"
+            web_icon="auction,static/description/icon.svg"
+            sequence="30">
+
+            <menuitem id="auction_menu"
+                name="Auction"
+                action="action_auctions"
+                sequence="10"/>
+
+            <menuitem id="menu_auction_ui" name="Auction Frontend" action="action_auction_url" sequence="20"/>
+        </menuitem>
+
     </data>
 </odoo>

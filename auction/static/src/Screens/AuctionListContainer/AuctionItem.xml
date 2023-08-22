@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="auction.AuctionItem" owl="1">
+        <div class="col-3 pt-4">
+            <div class="oe_product_image position-relative h-100 flex-grow-0">
+                <a class="oe_product_image_link d-block h-100 position-relative" itemprop="url" contenteditable="false">
+                    <span class="oe_product_image_img_wrapper d-flex h-100 justify-content-center align-items-center">
+                        <img t-attf-src="/web/image/auction.auction/{{props.auctionItem.id}}/image_512" itemprop="image" class="img img-fluid h-100 w-100" t-att-alt="props.auctionItem.name" loading="lazy">
+                    </span>
+                </a>
+            </div>
+            <div class="o_wsale_product_information position-relative d-flex flex-column flex-grow-1 flex-shrink-1">
+                <div class="o_wsale_product_information_text flex-grow-1">
+                    <h6 class="o_wsale_products_item_title mb-2">
+                        <a class="text-primary text-decoration-none" itemprop="name" href="">
+                            <t t-out="props.auctionItem.name"/>
+                        </a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

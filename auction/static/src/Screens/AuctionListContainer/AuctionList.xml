@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="auction.AuctionList" owl="1">
+        <div class="col-9">
+            <div class="row">
+                <t t-foreach="props.auctionItems" t-as="auctionItem" t-key="auctionItem.id">
+                    <AuctionItem auctionItem="auctionItem"/>
+                </t>
+            </div>
+        </div>
+    </t>
+</templates>

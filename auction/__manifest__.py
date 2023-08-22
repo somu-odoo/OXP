@@ -19,8 +19,12 @@
     'application': True,
     'installable': True,
     'data': [
+        'security/ir.model.access.csv',
         'views/templates.xml',
         'views/auction_views.xml',
+    ],
+    'demo': [
+        'data/auction_demo.xml',
     ],
     'assets': {
         'auction.assets_auction': [
@@ -41,6 +45,7 @@
             'web/static/src/core/browser/browser.js',
             'web/static/src/core/registry.js',
             'web/static/src/core/assets.js',
+
             'auction/static/src/**/*',
             'auction/static/src/auction.css',
         ],

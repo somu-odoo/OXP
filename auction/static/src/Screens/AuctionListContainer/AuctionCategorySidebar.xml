@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="auction.AuctionCategorySidebar" owl="1">
+        <div class="col-3">
+            <ul class="o_category_list">
+                <li>
+                    <input type="checkbox" name=""/>
+                    <span>Sneaker</span>
+                </li>
+                <li>
+                    <input type="checkbox" name=""/>
+                    <span>Jacket</span>
+                </li>
+                <li>
+                    <input type="checkbox" name=""/>
+                    <span>Clothes</span>
+                </li>
+            </ul>
+        </div>
+    </t>
+</templates>

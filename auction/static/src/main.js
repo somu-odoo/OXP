@@ -1,6 +1,7 @@
 /** @odoo-module **/
 
 import { browser } from "@web/core/browser/browser";
+import { rpc } from "./core/rpc.js";
 import { mount, EventBus } from "@odoo/owl";
 import { templates } from "@web/core/assets";
 import { Auction } from "./auction";
@@ -13,7 +14,7 @@ import { Auction } from "./auction";
 
 owl.whenReady( () => {
     const bus = new EventBus();
-    const env = { bus };
+    const env = { bus, rpc };
     mount(Auction, document.body, { templates, dev: true, env });
 });
 
