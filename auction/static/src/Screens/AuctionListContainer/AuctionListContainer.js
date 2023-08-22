@@ -3,8 +3,7 @@
 import { Component, useState, onWillStart } from "@odoo/owl";
 import { AuctionList } from "./AuctionList";
 import { AuctionCategorySidebar } from "./AuctionCategorySidebar";
-
-
+import { registry } from "@web/core/registry";
 
 export class AuctionListContainer extends Component {
     static template = "auction.AuctionListContainer";
@@ -22,3 +21,5 @@ export class AuctionListContainer extends Component {
 }
 
 AuctionListContainer.components = { AuctionList, AuctionCategorySidebar }
+
+registry.category("screens").add("AuctionList", AuctionListContainer);

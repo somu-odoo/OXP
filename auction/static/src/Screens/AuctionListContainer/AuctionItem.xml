@@ -4,7 +4,10 @@
     <t t-name="auction.AuctionItem" owl="1">
         <div class="col-3 pt-4">
             <div class="oe_product_image position-relative h-100 flex-grow-0">
-                <a class="oe_product_image_link d-block h-100 position-relative" itemprop="url" contenteditable="false">
+                <a class="oe_product_image_link d-block h-100 position-relative"
+                    itemprop="url" contenteditable="false"
+                    t-att-data-id="props.auctionItem.id"
+                    t-on-click.prevent="onClickItem">
                     <span class="oe_product_image_img_wrapper d-flex h-100 justify-content-center align-items-center">
                         <img t-attf-src="/web/image/auction.auction/{{props.auctionItem.id}}/image_512" itemprop="image" class="img img-fluid h-100 w-100" t-att-alt="props.auctionItem.name" loading="lazy">
                     </span>
