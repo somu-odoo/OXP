@@ -2,7 +2,7 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.container" owl="1">
-        <div class="container">
+        <div class="o_container">
             <main>
                 <t t-component="props.component" t-props="props.mainScreenProps" t-key="props.tname" />
             </main>

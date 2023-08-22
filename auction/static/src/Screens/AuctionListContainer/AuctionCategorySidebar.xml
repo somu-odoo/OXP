@@ -3,7 +3,7 @@
 
     <t t-name="auction.AuctionCategorySidebar" owl="1">
         <div class="col-3">
-            <ul>
+            <ul class="o_category_list">
                 <li>
                     <input type="checkbox" name=""/>
                     <span>Sneaker</span>

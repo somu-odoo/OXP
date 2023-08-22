@@ -23,6 +23,9 @@
         'views/templates.xml',
         'views/auction_views.xml',
     ],
+    'demo': [
+        'data/auction_demo.xml',
+    ],
     'assets': {
         'auction.assets_auction': [
             # bootstrap
