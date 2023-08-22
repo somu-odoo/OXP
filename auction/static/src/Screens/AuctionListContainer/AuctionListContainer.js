@@ -1,11 +1,13 @@
 /** @odoo-module **/
 
 import { Component, useState, onWillStart } from "@odoo/owl";
-import { AuctionItem } from "./AutctionItem";
+import { AuctionList } from "./AuctionList";
+import { AuctionCategorySidebar } from "./AuctionCategorySidebar";
 
 
-export class AuctionList extends Component {
-    static template = "auction.AuctionList";
+
+export class AuctionListContainer extends Component {
+    static template = "auction.AuctionListContainer";
 
     setup() {
         super.setup();
@@ -16,8 +18,7 @@ export class AuctionList extends Component {
     }
     async willStart() {
         this.auctionItems = await this.env.rpc("/get_auction_items", {});
-        debugger;
     }
 }
 
-AuctionList.components = { AuctionItem }
+AuctionListContainer.components = { AuctionList, AuctionCategorySidebar }

@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_auction_auction_user,auction.user,auction.model_auction_auction,base.group_user,1,0,0,0
-access_auction_auction_syste,auction.system,auction.model_auction_auction,base.group_system,1,1,1,1
+access_auction_auction_system,auction.system,auction.model_auction_auction,base.group_system,1,1,1,1
+access_auction_auction_public,auction.public,auction.model_auction_auction,base.group_public,1,1,1,1
