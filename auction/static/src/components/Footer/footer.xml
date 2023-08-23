@@ -3,6 +3,15 @@
 
     <t t-name="auction.footer" owl="1">
         <footer class="o_footer">
+            <div class="row">
+                <div class="col-12 text-center input-group mb-3">
+                    <span class="col-2 font-weight-bold">Subscribe for news</span>
+                    <input type="text" class="o_input_subscribe_email col-6 form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2"/>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" t-on-click="onClickSubscribe">Subscribe</button>
+                    </div>
+                </div>
+            </div>
             <div class="text-center">© 2023 Odoo S.A. All Rights Reserved</div>
         </footer>
     </t>

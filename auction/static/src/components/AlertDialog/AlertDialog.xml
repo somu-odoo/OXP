@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="web.AlertDialog" owl="1">
+        <Dialog>
+            <div>
+                <div class="mt16 small">
+                    <t t-out="props.message"/>
+                </div>
+            </div>
+            <t t-set-slot="footer">
+                <button class="btn btn-primary" t-on-click="props.close" >Close</button>
+            </t>
+        </Dialog>
+    </t>
+</templates>

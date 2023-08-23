@@ -10,11 +10,6 @@ export class Header extends Component {
 
     setup() {
         super.setup()
-        const searchInput = useRef('search_input');
-        function autofocus() {
-            searchInput.el.focus();
-        }
-        onMounted(autofocus);
     }
 }
 
