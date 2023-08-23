@@ -23,7 +23,31 @@
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/sneaker4.png"/>
+            <field name="end_date" eval="(DateTime.today() - relativedelta(months=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
+
+        <record id="auction_1_image_1" model="auction.auction.images">
+            <field name="name">Front Side</field>
+            <field name="auction_id" ref="auction.auction_1"/>
+            <field name="image_1920" type="base64" file="auction/static/images/sneaker4-2.png"/>
+        </record>
+        <record id="auction_1_image_2" model="auction.auction.images">
+            <field name="name">Left Side</field>
+            <field name="auction_id" ref="auction.auction_1"/>
+            <field name="image_1920" type="base64" file="auction/static/images/sneaker4-3.png"/>
+        </record>
+        <record id="auction_1_image_3" model="auction.auction.images">
+            <field name="name">Right Side</field>
+            <field name="auction_id" ref="auction.auction_1"/>
+            <field name="image_1920" type="base64" file="auction/static/images/sneaker4-4.png"/>
+        </record>
+        <record id="auction_1_image_4" model="auction.auction.images">
+            <field name="name">Back Side</field>
+            <field name="auction_id" ref="auction.auction_1"/>
+            <field name="image_1920" type="base64" file="auction/static/images/sneaker4-5.png"/>
+        </record>
+
+
         <record id="auction_2" model="auction.auction">
             <field name="name">Sneaker Nike</field>
             <field name="brand_id" ref="auction.brand_2"></field>
@@ -31,6 +55,7 @@
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/sneaker2.png"/>
+            <field name="end_date" eval="(DateTime.today() - relativedelta(months=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
         <record id="auction_3" model="auction.auction">
             <field name="name">Sneaker Redtape</field>
@@ -39,6 +64,7 @@
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/sneaker3.png"/>
+            <field name="end_date" eval="(DateTime.today() - relativedelta(months=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
         <record id="auction_4" model="auction.auction">
             <field name="name">Sneaker Roadster</field>
@@ -47,7 +73,25 @@
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/Sneaker1.png"/>
+            <field name="end_date" eval="(DateTime.today() - relativedelta(months=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
+
+        <record id="auction_4_image_1" model="auction.auction.images">
+            <field name="name">Front Side</field>
+            <field name="auction_id" ref="auction.auction_4"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Sneaker1-2.png"/>
+        </record>
+        <record id="auction_4_image_2" model="auction.auction.images">
+            <field name="name">Left Side</field>
+            <field name="auction_id" ref="auction.auction_4"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Sneaker1-3.png"/>
+        </record>
+        <record id="auction_4_image_3" model="auction.auction.images">
+            <field name="name">Right Side</field>
+            <field name="auction_id" ref="auction.auction_4"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Sneaker1-4.png"/>
+        </record>
+
         <record id="auction_5" model="auction.auction">
             <field name="name">Sneaker Jack &amp; Jones</field>
             <field name="brand_id" ref="auction.brand_1"></field>
@@ -55,7 +99,24 @@
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/JackAndJones.png"/>
+            <field name="end_date" eval="(DateTime.today() - relativedelta(months=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
+        <record id="auction_5_image_1" model="auction.auction.images">
+            <field name="name">Front Side</field>
+            <field name="auction_id" ref="auction.auction_5"/>
+            <field name="image_1920" type="base64" file="auction/static/images/JackAndJones2.png"/>
+        </record>
+        <record id="auction_5_image_2" model="auction.auction.images">
+            <field name="name">Left Side</field>
+            <field name="auction_id" ref="auction.auction_5"/>
+            <field name="image_1920" type="base64" file="auction/static/images/JackAndJones3.png"/>
+        </record>
+        <record id="auction_5_image_3" model="auction.auction.images">
+            <field name="name">Left Side</field>
+            <field name="auction_id" ref="auction.auction_5"/>
+            <field name="image_1920" type="base64" file="auction/static/images/JackAndJones4.png"/>
+        </record>
+
         <record id="auction_6" model="auction.auction">
             <field name="name">Sneaker Nike</field>
             <field name="brand_id" ref="auction.brand_2"></field>
@@ -63,7 +124,9 @@
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/Nike.png"/>
+            <field name="end_date" eval="(DateTime.today() - relativedelta(months=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
+
         <record id="auction_7" model="auction.auction">
             <field name="name">Sneaker Reebok</field>
             <field name="brand_id" ref="auction.brand_3"></field>
@@ -71,7 +134,19 @@
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/Reebok.png"/>
+            <field name="end_date" eval="(DateTime.today() - relativedelta(months=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
+        <record id="auction_7_image_1" model="auction.auction.images">
+            <field name="name">Front Side</field>
+            <field name="auction_id" ref="auction.auction_7"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Reebok2.png"/>
+        </record>
+        <record id="auction_7_image_2" model="auction.auction.images">
+            <field name="name">Left Side</field>
+            <field name="auction_id" ref="auction.auction_7"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Reebok3.png"/>
+        </record>
+
         <record id="auction_8" model="auction.auction">
             <field name="name">Sneaker US POLO</field>
             <field name="brand_id" ref="auction.brand_4"></field>
@@ -79,6 +154,22 @@
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/uspa.png"/>
+            <field name="end_date" eval="(DateTime.today() - relativedelta(months=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        </record>
+
+        <record id="auction_8_image_1" model="auction.auction.images">
+            <field name="name">Front Side</field>
+            <field name="auction_id" ref="auction.auction_8"/>
+            <field name="image_1920" type="base64" file="auction/static/images/uspa2.png"/>
+        </record>
+        <record id="auction_8_image_2" model="auction.auction.images">
+            <field name="name">Left Side</field>
+            <field name="auction_id" ref="auction.auction_8"/>
+            <field name="image_1920" type="base64" file="auction/static/images/uspa3.png"/>
+        </record>
+        <record id="auction_8_image_3" model="auction.auction.images">
+            <field name="auction_id" ref="auction.auction_8"/>
+            <field name="image_1920" type="base64" file="auction/static/images/uspa4.png"/>
         </record>
     </data>
 </odoo>

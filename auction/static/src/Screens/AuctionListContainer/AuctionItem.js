@@ -8,10 +8,12 @@ export class AuctionItem extends Component {
 
     setup() {
         super.setup();
+        this.auctionItem = this.props.auctionItem;
     }
 
     onClickItem(ev) {
-        const id = ev.target.getAttribute('data-id');
-        this.env.bus.trigger('change_screen', { 'screen_name': 'AuctionDetails', id })
+        const id = ev.currentTarget.getAttribute('data-id');
+        const auction = this.env.db.getAuctionItem(parseInt(id))
+        this.env.bus.trigger('change_screen', { 'screen_name': 'AuctionDetails', auctionItem: this.auctionItem });
     }
 }

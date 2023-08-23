@@ -1,13 +1,12 @@
 /** @odoo-module **/
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState, onMounted, useRef } from "@odoo/owl";
 import { Header } from "./components/Header/header";
 import { Container } from "./components/Container/container";
 import { Footer } from "./components/Footer/footer";
 import { registry } from "@web/core/registry";
 
 import { AuctionListContainer } from "./Screens/AuctionListContainer/AuctionListContainer";
-
 
 export class Auction extends Component {
     static template = "auction.root";
@@ -35,7 +34,7 @@ export class Auction extends Component {
         const screen = screenRegistry.get(ev.detail.screen_name)
         this.mainScreen.name = ev.detail.screen_name;
         this.mainScreen.component = screen;
-        this.mainScreenProps = { id: ev.detail.id };
+        this.mainScreenProps = { detail: ev.detail };
     }
 }
 

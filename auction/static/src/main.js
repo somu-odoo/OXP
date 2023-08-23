@@ -2,6 +2,7 @@
 
 import { browser } from "@web/core/browser/browser";
 import { rpc } from "./core/rpc.js";
+import { DB } from "./core/db.js";
 import { mount, EventBus } from "@odoo/owl";
 import { templates } from "@web/core/assets";
 import { Auction } from "./auction";
@@ -14,7 +15,8 @@ import { Auction } from "./auction";
 
 owl.whenReady( () => {
     const bus = new EventBus();
-    const env = { bus, rpc };
+    const db = new DB();
+    const env = { bus, db, rpc };
     mount(Auction, document.body, { templates, dev: true, env });
 });
 

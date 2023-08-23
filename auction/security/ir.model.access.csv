@@ -5,3 +5,9 @@ access_auction_auction_public,auction.public,auction.model_auction_auction,base.
 access_auction_brand_user,auction.brad.user,auction.model_auction_item_brand,base.group_user,1,1,1,1
 access_auction_brand_system,auction.brand.system,auction.model_auction_item_brand,base.group_system,1,1,1,1
 access_auction_brand_public,auction.brand.public,auction.model_auction_item_brand,base.group_public,1,1,1,1
+access_auction_category_user,auction.category.user,auction.model_auction_category,base.group_user,1,1,1,1
+access_auction_category_system,auction.category.system,auction.model_auction_category,base.group_system,1,1,1,1
+access_auction_category_public,auction.category.public,auction.model_auction_category,base.group_public,1,1,1,1
+access_auction_images_user,auction.images.user,auction.model_auction_auction_images,base.group_user,1,1,1,1
+access_auction_images_system,auction.images.system,auction.model_auction_auction_images,base.group_system,1,1,1,1
+access_auction_images_public,auction.images.public,auction.model_auction_auction_images,base.group_public,1,1,1,1

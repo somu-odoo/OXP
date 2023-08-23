@@ -2,8 +2,8 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.Timer" owl="1">
-        <div class="p-3">
-            Timer
+        <div>
+            
         </div>
     </t>
 </templates>
