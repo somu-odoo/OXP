@@ -3,7 +3,7 @@
 
     <t t-name="auction.search" owl="1">
         <div class="col-6 pt-4">
-            <input type="input" class="o_input_search"/>
+            <input type="input" class="o_input_search" t-ref="search_input"/>
         </div>
     </t>
 </templates>

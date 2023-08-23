@@ -17,6 +17,7 @@ export class AuctionListContainer extends Component {
     }
     async willStart() {
         this.auctionItems = await this.env.rpc("/get_auction_items", {});
+        this.env.db.save('auctions', this.auctionItems);
     }
 }
 

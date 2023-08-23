@@ -34,6 +34,7 @@
             'web/static/lib/bootstrap/scss/_variables.scss',
             ('include', 'web._assets_bootstrap'),
 
+            'web/static/lib/moment/moment.js', # required for date/datetime operations
             'web/static/src/libs/fontawesome/css/font-awesome.css', # required for fa icons
             'web/static/src/legacy/js/promise_extension.js', # required by boot.js
             'web/static/src/boot.js', # odoo module system

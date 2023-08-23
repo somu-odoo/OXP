@@ -2,8 +2,23 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.AuctionDetails" owl="1">
-        <div class="p-3">
-            Auction Details
+        <div class="row pt-4">
+            <div class="col-5">
+                <span class="oe_product_image_img_wrapper d-flex h-100 justify-content-center align-items-center">
+                    <img t-attf-src="/web/image/auction.auction/{{auctionItem.id}}/image_512" itemprop="image" class="o_detail_image img img-fluid h-100 w-100" t-att-alt="auctionItem.name" loading="lazy"/>
+                </span>
+            </div>
+            <div class="col-7">
+                <h5 t-out="auctionItem.name"></h5>
+                <span t-out="auctionItem.description"/>
+                <!-- <Timer endDatetime="endDate"/> -->
+                <div>
+                    <b>Bid Price: ₹<span t-out="auctionItem.bid_price"></span></b>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary">Place Bid</button>
+                </div>
+            </div>
         </div>
     </t>
 </templates>

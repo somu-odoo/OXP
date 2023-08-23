@@ -36,6 +36,14 @@
                                 <field name="current_bid_price"/>
                             </group>
                         </group>
+                        <notebook>
+                            <page string="Images">
+                                <field name="image_ids"/>
+                            </page>
+                            <page string="Description">
+                                <field name="description"/>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>

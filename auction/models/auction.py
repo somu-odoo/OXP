@@ -17,9 +17,18 @@ class Auction(models.Model):
     _inherit = ['avatar.mixin']
 
     name = fields.Char()
+    image_ids = fields.One2many("auction.auction.images", 'auction_id', string="Images")
     brand_id = fields.Many2one("auction.item.brand")
     categ_id = fields.Many2one("auction.category")
-    description = fields.Html()
+    description = fields.Text()
     bid_price = fields.Monetary()
     current_bid_price = fields.Monetary()
     currency_id = fields.Many2one('res.currency', string='Auction Currency', tracking=True, default=lambda self: self.env.company.currency_id)
+    end_date = fields.Datetime("End Time", required=True)
+
+class AuctionImages(models.Model):
+    _name = "auction.auction.images"
+    _inherit = ['avatar.mixin']
+
+    name = fields.Char()
+    auction_id = fields.Many2one("auction.auction")
