@@ -5,13 +5,10 @@
         <div class="row p-3">
             <div class="col-3">
                 <img src="/auction/static/src/img/logo.png" />
+                Auction
             </div>
-            <div class="col-6 pt-4">
-                <input type="input" class="o_input_search"/>
-            </div>
-            <div class="col-3 pt-4">
-                <div><a class="" href="#">About US</a></div>
-            </div>
+            <Search />
+            <Menus />
         </div>
     </t>
 </templates>

@@ -2,8 +2,8 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.search" owl="1">
-        <div class="p-3">
-            
+        <div class="col-6 pt-4">
+            <input type="input" class="o_input_search"/>
         </div>
     </t>
 </templates>
