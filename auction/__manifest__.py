@@ -36,6 +36,9 @@
 
             'web/static/lib/moment/moment.js', # required for date/datetime operations
             'web/static/src/libs/fontawesome/css/font-awesome.css', # required for fa icons
+            'web/static/src/libs/fontawesome/fonts/fontawesome-webfont.ttf',
+            'web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff',
+            'web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2',
             'web/static/src/legacy/js/promise_extension.js', # required by boot.js
             'web/static/src/boot.js', # odoo module system
             'web/static/src/env.js', # required for services

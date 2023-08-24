@@ -16,7 +16,7 @@
                     <b>Bid Price: ₹<span t-out="auctionItem.bid_price"></span></b>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-primary">Place Bid</button>
+                    <button type="button" class="btn btn-primary" t-on-click="onPlaceBid">Place Bid</button>
                 </div>
             </div>
         </div>

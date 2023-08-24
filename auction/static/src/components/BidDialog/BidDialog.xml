@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="web.BidDialog" owl="1">
+        <Dialog>
+            <div>
+                <div class="mt16 small">
+                    <input type="number" class="o_input" t-ref="bid_input"/>
+                </div>
+            </div>
+            <t t-set-slot="footer">
+                <button class="btn btn-primary" t-on-click="onConfirmBid">Confirm</button>
+            </t>
+        </Dialog>
+    </t>
+</templates>
