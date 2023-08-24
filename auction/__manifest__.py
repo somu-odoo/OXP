@@ -43,6 +43,7 @@
             'web/static/lib/owl/owl.js', # owl library
             'web/static/lib/owl/odoo_module.js', # to be able to import "@odoo/owl"
             'web/static/src/core/utils/functions.js',
+            'web/static/src/core/utils/components.js',
             'web/static/src/core/browser/browser.js',
             'web/static/src/core/registry.js',
             'web/static/src/core/assets.js',

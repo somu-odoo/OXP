@@ -13,7 +13,6 @@
                             <t t-slot="header"> <!-- close="data.close" -->
                                 <t t-call="web.Dialog.header">
                                     <t t-set="close" t-value="data.close"/>
-                                    <t t-set="fullscreen" t-value="isFullscreen"/>
                                 </t>
                             </t>
                         </header>
@@ -21,7 +20,7 @@
                         To avoid this we place the footer before the body -->
                         <footer class="modal-footer justify-content-around justify-content-sm-start flex-wrap gap-1" style="order:2">
                             <t t-slot="footer"> <!-- close="data.close" -->
-                                <button class="btn btn-primary o-default-button" t-on-click="data.close">
+                                <button class="btn btn-primary o-default-button">
                                     <t>Ok</t>
                                 </button>
                             </t>
@@ -36,14 +35,9 @@
     </t>
 
     <t t-name="web.Dialog.header" owl="1">
-        <t t-if="fullscreen">
-            <button class="btn fa fa-arrow-left" data-bs-dismiss="modal" aria-label="Close" t-on-click="close" />
-        </t>
-        <h4 class="modal-title text-break" t-att-class="{ 'me-auto': fullscreen }">
+        <h4 class="modal-title text-break">
             <t t-esc="props.title"/>
         </h4>
-        <t t-if="!fullscreen">
-            <button type="button" class="btn-close" aria-label="Close" tabindex="-1" t-on-click="close"></button>
-        </t>
+        <button type="button" class="btn-close" aria-label="Close" tabindex="-1" t-on-click="close"></button>
     </t>
 </templates>

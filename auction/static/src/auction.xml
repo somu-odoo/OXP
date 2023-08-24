@@ -5,6 +5,6 @@
         <Header/>
         <Container tname="mainScreen.name" component="mainScreen.component" mainScreenProps="mainScreenPropsFielded"/>
         <Footer/>
-        <div class="dialogContainer"></div>
+        <DialogContainer dialogs="dialogs"/>
     </t>
 </templates>

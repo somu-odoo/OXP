@@ -4,7 +4,7 @@ import { Component } from "@odoo/owl";
 import { Dialog } from "../dialog/dialog"
 
 
-export class AlertDialog extends Dialog {
+export class AlertDialog extends Component {
     
 }
 

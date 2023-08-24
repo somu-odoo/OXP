@@ -1,31 +1,10 @@
 /** @odoo-module **/
 
-// import { useHotkey } from "@web/core/hotkeys/hotkey_hook";
-// import { useActiveElement } from "../ui/ui_service";
-// import { useForwardRefToParent } from "@web/core/utils/hooks";
-
 import { Component, useChildSubEnv, useState } from "@odoo/owl";
 export class Dialog extends Component {
-    // setup() {
-    //     this.modalRef = useForwardRefToParent("modalRef");
-    //     useActiveElement("modalRef");
-    //     this.data = useState(this.env.dialogData);
-    //     useHotkey("escape", () => {
-    //         this.data.close();
-    //     });
-    //     this.id = `dialog_${this.data.id}`;
-    //     useChildSubEnv({ inDialog: true, dialogId: this.id, closeDialog: this.data.close });
-
-        // owl.onWillDestroy(() => {
-        //     if (this.env.isSmall) {
-        //         this.data.scrollToOrigin();
-        //     }
-        // });
-    // }
-
-    // get isFullscreen() {
-    //     return this.props.fullscreen || this.env.isSmall;
-    // }
+    setup() {
+        this.data = this.env.dialogData;
+    }
 }
 Dialog.template = "web.Dialog";
 // Dialog.props = {
