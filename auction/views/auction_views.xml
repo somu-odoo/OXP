@@ -34,6 +34,7 @@
                             <group>
                                 <field name="bid_price"/>
                                 <field name="current_bid_price"/>
+                                <field name="end_date"/>
                             </group>
                         </group>
                         <notebook>

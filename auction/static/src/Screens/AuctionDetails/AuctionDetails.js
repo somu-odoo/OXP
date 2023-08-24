@@ -2,6 +2,7 @@
 
 import { Component } from "@odoo/owl";
 import { registry } from "@web/core/registry";
+import { Timer } from "../../components/Timer/Timer";
 
 
 export class AuctionDetails extends Component {
@@ -11,8 +12,8 @@ export class AuctionDetails extends Component {
         super.setup();
         this.auctionItem = this.props.detail.auctionItem;
         this.endDate = moment(this.auctionItem.end_date, 'YYYY-MM-DD hh:mm:ss')
-        debugger;
     }
 }
+AuctionDetails.components = { Timer }
 
 registry.category("screens").add("AuctionDetails", AuctionDetails);

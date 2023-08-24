@@ -2,8 +2,11 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.Timer" owl="1">
-        <div>
-            
+        <div class="d-flex">
+            <div><t t-out="state.days"/> Days </div>
+            <div><t t-out="state.hours"/> Hours </div>
+            <div><t t-out="state.minutes"/> Minutes </div>
+            <div><t t-out="state.seconds"/> Seconds </div>
         </div>
     </t>
 </templates>
