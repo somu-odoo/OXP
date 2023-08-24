@@ -6,7 +6,7 @@
     </t>
 
     <t t-name="auction.menuItem" owl="1">
-        <div class="col-3 pt-4">
+        <div class="bid_tabs p-3 d-flex bg-warning justify-content-around">
             <div><a class="" href="#">Menu 1</a></div>
             <div><a class="" href="#">Menu 2</a></div>
             <div><a class="" href="#">Menu 3</a></div>

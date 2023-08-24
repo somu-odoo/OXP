@@ -1,3 +1,36 @@
 .o_auction .o_logo {
     cursor: pointer;
 }
+//Design for Auction Title
+
+.auction_title {
+    background: #000;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 30px;
+    border-radius: 10px;
+    box-shadow: 6px 4px 20px #0000008c;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auction_title::before {
+    // content: "";
+    background-image: conic-gradient(#ff0052 20deg transparent 120deg);
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 3s linear infinite;
+}
+
+// Design for Bid Tabs
+
+.bid_tabs a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;  
+}
+

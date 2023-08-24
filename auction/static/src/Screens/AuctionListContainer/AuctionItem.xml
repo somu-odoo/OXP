@@ -8,12 +8,19 @@
                     itemprop="url" contenteditable="false"
                     t-att-data-id="props.auctionItem.id"
                     t-on-click.prevent="onClickItem">
-                    <span class="oe_product_image_img_wrapper d-flex h-100 justify-content-center align-items-center">
-                        <img t-attf-src="/web/image/auction.auction/{{props.auctionItem.id}}/image_512" itemprop="image" class="img img-fluid h-100 w-100" t-att-alt="props.auctionItem.name" loading="lazy">
-                    </span>
+                    <div class="card">
+                        <img t-attf-src="/web/image/auction.auction/{{props.auctionItem.id}}/image_512" itemprop="image" class="prod_img img-fluid h-100 w-100" t-att-alt="props.auctionItem.name" loading="lazy"/>
+                        <div class="prod_desc">
+                            <h3 class="bid_title"><t t-out="props.auctionItem.name"/></h3>
+                            <p class="bid_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis interdum massa et tristique. Quisque egestas, risus et lacinia tempus, ex ex imperdiet ipsum, ac viverra libero odio vitae mi.</p>
+                            <p class="bid_name">Manushi Shah</p>
+                            <p class="bid_price">$20000</p>
+                            <button class="btn_bid_details">Bid Details</button>
+                        </div>
+                    </div>
                 </a>
             </div>
-            <div class="o_wsale_product_information position-relative d-flex flex-column flex-grow-1 flex-shrink-1">
+            <!-- <div class="o_wsale_product_information position-relative d-flex flex-column flex-grow-1 flex-shrink-1">
                 <div class="o_wsale_product_information_text flex-grow-1">
                     <h6 class="o_wsale_products_item_title mb-2">
                         <a class="text-primary text-decoration-none" itemprop="name" href="">
@@ -21,7 +28,7 @@
                         </a>
                     </h6>
                 </div>
-            </div>
+            </div> -->
         </div>
     </t>
 </templates>
