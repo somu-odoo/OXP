@@ -1,15 +1,22 @@
 /** @odoo-module **/
 
-import { Component } from "@odoo/owl";
+import { Component, useRef } from "@odoo/owl";
 import { AlertDialog } from "../AlertDialog/AlertDialog";
 
 export class Footer extends Component {
-    static template = "auction.footer";
+    // static template = "auction.footer";
+    setup() {
+        this.subscribeInput = useRef('subscribe_email');
+        this.dialogContainer = useRef('dialogContainer');
+    }
 
     onClickSubscribe(ev) {
-        debugger;
-        if (!this.el.querySelector('.o_input_subscribe_email').value) {
-            debugger;
+        if (!this.subscribeInput.el.value) {
+            this.env.bus.trigger('add_dialog', { dialog: AlertDialog, props: {
+                'message': 'Please add email address!',
+            }});
         }
     }
 }
+
+Footer.template = "auction.footer";

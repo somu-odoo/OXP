@@ -11,7 +11,7 @@
             <div class="col-7">
                 <h5 t-out="auctionItem.name"></h5>
                 <span t-out="auctionItem.description"/>
-                <!-- <Timer endDatetime="endDate"/> -->
+                <Timer endDatetime="endDate"/>
                 <div>
                     <b>Bid Price: ₹<span t-out="auctionItem.bid_price"></span></b>
                 </div>
