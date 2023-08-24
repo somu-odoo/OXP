@@ -1,6 +1,6 @@
 /** @odoo-module **/
 
-import { Component, useState, onMounted, useRef, reactive } from "@odoo/owl";
+import { Component, useState, onMounted, useRef, reactive, useExternalListener } from "@odoo/owl";
 import { Header } from "./components/Header/header";
 import { Container } from "./components/Container/container";
 import { Footer } from "./components/Footer/footer";
@@ -37,6 +37,7 @@ export class Auction extends Component {
 
     onAddDialog(ev) {
         const id = this.dialogId++
+        this.lastId = id;
         const close = () => {
             if (this.dialogs[id]) {
                 delete this.dialogs[id];

@@ -1,9 +1,18 @@
 /** @odoo-module **/
 
-import { Component, useChildSubEnv, useState } from "@odoo/owl";
+import { Component, useExternalListener, useRef, useChildSubEnv, useState } from "@odoo/owl";
 export class Dialog extends Component {
     setup() {
         this.data = this.env.dialogData;
+        useExternalListener(document.body, "click", this.closeActiveDialog.bind(this));
+        this.modalElement = useRef('modalRef')
+    }
+
+    closeActiveDialog(ev) {
+        const modalContent = this.modalElement.el.querySelector('.modal-content')
+        if (!modalContent.contains(ev.target)) {
+            this.data.close();
+        }
     }
 }
 Dialog.template = "web.Dialog";
