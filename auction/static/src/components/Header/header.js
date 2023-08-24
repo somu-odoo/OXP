@@ -8,8 +8,8 @@ import { Menus } from "./menus";
 export class Header extends Component {
     static template = "auction.header";
 
-    setup() {
-        super.setup()
+    onClickLogo() {
+        window.location.href = "/auction";
     }
 }
 
