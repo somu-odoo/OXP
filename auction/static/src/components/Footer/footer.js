@@ -2,6 +2,7 @@
 
 import { Component, useRef } from "@odoo/owl";
 import { AlertDialog } from "../AlertDialog/AlertDialog";
+import { Menus } from "../Header/menus";
 
 export class Footer extends Component {
     // static template = "auction.footer";
@@ -20,3 +21,4 @@ export class Footer extends Component {
 }
 
 Footer.template = "auction.footer";
+Footer.components = { Menus };

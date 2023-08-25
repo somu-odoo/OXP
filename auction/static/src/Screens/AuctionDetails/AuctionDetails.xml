@@ -2,11 +2,69 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.AuctionDetails" owl="1">
-        <div class="row pt-4">
+        <div class="m-5">
+            <div class="px-0 md:px-5 mx-50">
+                <div class="mx-auto d-flex flex-wrap lg:flex-nowrap space-x-0 md:space-x-4">
+                    <div class="col-2"></div>
+                    <div class="w-full lg:h-auto">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img t-attf-src="/web/image/auction.auction/{{auctionItem.id}}/image_512" itemprop="image" class="o_detail_image img img-fluid h-100 w-100" t-att-alt="auctionItem.name" loading="lazy"/>
+                              </div>
+                              <div class="carousel-item">
+                                <img t-attf-src="/web/image/auction.auction/{{auctionItem.id}}/image_512" itemprop="image" class="o_detail_image img img-fluid h-100 w-100" t-att-alt="auctionItem.name" loading="lazy"/>
+                              </div>
+                              <div class="carousel-item">
+                                <img t-attf-src="/web/image/auction.auction/{{auctionItem.id}}/image_512" itemprop="image" class="o_detail_image img img-fluid h-100 w-100" t-att-alt="auctionItem.name" loading="lazy"/>
+                              </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </a>
+                          </div>
+                    </div>
+                    <div class="col-4 w-full px-5 flex flex-col flex-auto justify-between">
+                        <div>
+                            <span class="text-600 uppercase mb-2 block">Jimmy Butler</span>
+                            <h1 class="text-3xl font-header font-bold mb-4" t-out="auctionItem.name"/>
+                            <p class="leading-relaxed" t-out="auctionItem.description"/>
+                        </div>
+                        <div class="d-flex flex-row mt-4 gap-4">
+                            <div class="flex flex-col justify-between">
+                                <p class="text-500 uppercase"> Bid Price: </p>
+                                <p>$<t t-out="auctionItem.bid_price"/></p>
+                            </div>
+                            <div class="flex flex-col justify-between">
+                                <p class="text-500 uppercase"> Estimated Value </p>
+                                <p> $2,000 </p>
+                            </div>
+                        </div>
+                        <div class="">
+                            <p class="text-600 uppercase"> Ending In:  </p>
+                            <Timer endDatetime="endDate"/>
+                        </div>
+                        <div class="mt-4">
+                            <button type="button" class="btn btn-primary" t-on-click="onPlaceBid">Place Bid</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <h1 class="text-600">Related Products:</h1>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row pt-4">
             <div class="col-5">
-                <span class="oe_product_image_img_wrapper d-flex h-100 justify-content-center align-items-center">
-                    <img t-attf-src="/web/image/auction.auction/{{auctionItem.id}}/image_512" itemprop="image" class="o_detail_image img img-fluid h-100 w-100" t-att-alt="auctionItem.name" loading="lazy"/>
-                </span>
+                <img t-attf-src="/web/image/auction.auction/{{auctionItem.id}}/image_512" itemprop="image" class="o_detail_image img img-fluid h-100 w-100" t-att-alt="auctionItem.name" loading="lazy"/>
             </div>
             <div class="col-7">
                 <h5 t-out="auctionItem.name"></h5>
@@ -15,10 +73,7 @@
                 <div>
                     <b>Bid Price: ₹<span t-out="auctionItem.bid_price"></span></b>
                 </div>
-                <div>
-                    <button type="button" class="btn btn-primary" t-on-click="onPlaceBid">Place Bid</button>
-                </div>
             </div>
-        </div>
+        </div> -->
     </t>
 </templates>
