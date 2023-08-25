@@ -2,11 +2,29 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.Timer" owl="1">
-        <div class="d-flex">
+        <div class="timer_container d-flex">
+            <div>
+                <p id="timer_days" class="fs-3"><t t-out="state.days"/></p>
+                <span>Days</span>
+            </div>
+            <div>
+                <p id="timer_hours" class="fs-3"><t t-out="state.hours"/></p>
+                <span>Hours</span>
+            </div>
+            <div>
+                <p id="timer_min" class="fs-3"><t t-out="state.minutes"/></p>
+                <span>Minutes</span>
+            </div>
+            <div>
+                <p id="timer_sec" class="fs-3"><t t-out="state.seconds"/></p>
+                <span>Seconds</span>
+            </div>
+        </div>
+        <!-- <div class="d-flex">
             <div><t t-out="state.days"/> Days </div>
             <div><t t-out="state.hours"/> Hours </div>
             <div><t t-out="state.minutes"/> Minutes </div>
             <div><t t-out="state.seconds"/> Seconds </div>
-        </div>
+        </div> -->
     </t>
 </templates>

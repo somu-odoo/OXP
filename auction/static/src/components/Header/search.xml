@@ -2,8 +2,14 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.search" owl="1">
-        <div class="col-6 pt-4">
-            <input type="input" class="o_input_search" t-ref="search_input"/>
+        <div class="bg-black w-full text-white mb-4">
+            <div class="d-flex flex-col p-3 w-full justify-content-center">
+                <span class="fw-bold text-capitalize text-center me-3">Search for the products you wanna bid!!</span>
+                <div class="bid_search">
+                    <input type="input" class="o_input_search" t-ref="search_input"/>
+                    <button class="p-1 ms-1 bg-warning"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
         </div>
     </t>
 </templates>
