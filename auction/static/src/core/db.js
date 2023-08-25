@@ -1,6 +1,6 @@
 /** @odoo-module **/
 
-import { EventBus } from "@odoo/owl";
+import { EventBus, useEnv } from "@odoo/owl";
 
 
 export class DB extends EventBus {
@@ -24,5 +24,12 @@ export class DB extends EventBus {
         const auctions = this.load('auctions');
         const auction = auctions.find((auction) => auction.id === id);
         return auction
+    }
+}
+
+export function useFetchAuctions() {
+    const env = useEnv();
+    return () => {
+        return env.rpc("/get_auction_items", {});
     }
 }
