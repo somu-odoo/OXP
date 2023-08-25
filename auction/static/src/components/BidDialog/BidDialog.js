@@ -12,6 +12,9 @@ export class BidDialog extends Component {
         image.setAttribute('src', 'auction/static/images/right.gif');
         div.appendChild(image);
         document.body.appendChild(div);
+        setTimeout(() => {
+            div.remove();
+        }, 2000);
         this.props.close();
     }
 }
