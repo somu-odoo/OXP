@@ -21,11 +21,6 @@ export class Auction extends Component {
 
         this.dialogs = reactive({});
         this.dialogId = 0;
-
-        // registry.category("main_components").add("DialogContainer", {
-        //     Component: DialogContainer,
-        //     props: { dialogs },
-        // });
     }
 
     /**
@@ -41,9 +36,6 @@ export class Auction extends Component {
         const close = () => {
             if (this.dialogs[id]) {
                 delete this.dialogs[id];
-                // Object.values(this.dialogs).forEach((dialog, i, dialogArr) => {
-                //     dialog.dialogData.isActive = i === dialogArr.length - 1;
-                // });
                 if (ev.detail.onClose) {
                     ev.detail.onClose();
                 }
