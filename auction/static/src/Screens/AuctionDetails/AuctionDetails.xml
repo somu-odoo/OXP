@@ -8,12 +8,12 @@
                     <div class="col-2"></div>
                     <div class="w-full lg:h-auto">
                         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                            </ol>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            </div>
                             <div class="carousel-inner">
                               <t t-set="count" t-value="0"/>  
                               <div t-attf-class="carousel-item {{count == 0 and 'active' or ''}}" t-foreach="auctionItem.images" t-as="image" t-key="image.id">
@@ -21,12 +21,14 @@
                                 <t t-set="count" t-value="count + 1"/>
                               </div>
                             </div>
-                            <a class="carousel-control-prev" t-on-click.prevent="" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            </a>
-                            <a class="carousel-control-next" t-on-click.prevent="" href="#carouselExampleIndicators" role="button" data-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            </a>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                           </div>
                     </div>
                     <div class="col-4 w-full px-5 flex flex-col flex-auto justify-between">

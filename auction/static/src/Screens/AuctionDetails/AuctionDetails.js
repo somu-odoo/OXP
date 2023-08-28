@@ -1,6 +1,6 @@
 /** @odoo-module **/
 
-import { Component, onMounted } from "@odoo/owl";
+import { Component } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 import { Timer } from "../../components/Timer/Timer";
 import { BidDialog } from "../../components/BidDialog/BidDialog";
