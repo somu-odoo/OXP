@@ -43,7 +43,7 @@ export class Auction extends Component {
         }
         const dialog = {
             class: ev.detail.dialog,
-            props: Object.assign({}, ev.detail.props, { close }),
+            props: Object.assign({}, ev.detail.props, { close, id }),
             dialogData: {
                 close,
             }

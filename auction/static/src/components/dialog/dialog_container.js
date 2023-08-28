@@ -1,6 +1,6 @@
 /** @odoo-module **/
 
-import { WithEnv } from "@web/core/utils/components";
+import { WithEnv } from "../../utils/withenv";
 import { Component, xml } from "@odoo/owl";
 
 export class DialogContainer extends Component {
