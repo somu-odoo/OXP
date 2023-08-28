@@ -2,15 +2,15 @@
 <templates xml:space="preserve">
 
     <t t-name="web.Dialog" owl="1">
-        <div class="o_dialog"> <!-- t-att-id="id" t-att-class="{ o_inactive_modal: !data.isActive }" -->
+        <div class="o_dialog">
             <div role="dialog" class="modal d-block"
                 tabindex="-1"
                 t-ref="modalRef"
                 >
-                <div class="modal-dialog" t-attf-class="modal-md"> <!-- {{props.size}} -->
-                    <div class="modal-content"> <!-- t-att-class="props.contentClass" -->
-                        <header class="modal-header"> <!-- t-if="props.header" -->
-                            <t t-slot="header"> <!-- close="data.close" -->
+                <div class="modal-dialog" t-attf-class="modal-{{props.size}}">
+                    <div class="modal-content" t-att-class="props.contentClass">
+                        <header t-if="props.header" class="modal-header">
+                            <t t-slot="header">
                                 <t t-call="web.Dialog.header">
                                     <t t-set="close" t-value="data.close"/>
                                 </t>
@@ -18,15 +18,15 @@
                         </header>
                         <!-- FIXME: WOWL there is a bug on t-portal on owl, in which t-portal don't work on multinode.
                         To avoid this we place the footer before the body -->
-                        <footer class="modal-footer justify-content-around justify-content-sm-start flex-wrap gap-1" style="order:2">
-                            <t t-slot="footer"> <!-- close="data.close" -->
+                        <footer t-if="props.footer" class="modal-footer justify-content-around justify-content-sm-start flex-wrap gap-1" style="order:2">
+                            <t t-slot="footer">
                                 <button class="btn btn-primary o-default-button">
                                     <t>Ok</t>
                                 </button>
                             </t>
                         </footer>
-                        <main class="modal-body">
-                            <t t-slot="default"/> <!-- close="data.close" -->
+                        <main class="modal-body" t-attf-class="{{ props.bodyClass }}">
+                            <t t-slot="default"/>
                         </main>
                     </div>
                 </div>
