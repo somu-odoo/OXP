@@ -8,7 +8,6 @@
                 <div class="auction_title">Auction</div>
             </div>
             <Search />
-            <!-- <Menus /> -->
         </div>
     </t>
 </templates>

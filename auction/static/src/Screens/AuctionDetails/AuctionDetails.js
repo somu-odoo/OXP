@@ -12,7 +12,7 @@ export class AuctionDetails extends Component {
     setup() {
         super.setup();
         this.auctionItem = this.props.detail.auctionItem;
-        this.endDate = moment(this.auctionItem.end_date, 'YYYY-MM-DD hh:mm:ss')
+        this.endDate = moment(this.auctionItem.end_date, 'YYYY-MM-DD hh:mm:ss');
     }
 
     onPlaceBid(ev) {

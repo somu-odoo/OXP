@@ -1,7 +1,7 @@
 /** @odoo-module **/
 
 import { Component } from "@odoo/owl";
-
+import { Timer } from "../../components/Timer/Timer";
 
 export class AuctionItem extends Component {
     static template = "auction.AuctionItem";
@@ -9,6 +9,7 @@ export class AuctionItem extends Component {
     setup() {
         super.setup();
         this.auctionItem = this.props.auctionItem;
+        this.endDate = moment(this.auctionItem.end_date, 'YYYY-MM-DD hh:mm:ss')
     }
 
     onClickItem(ev) {
@@ -17,3 +18,5 @@ export class AuctionItem extends Component {
         this.env.bus.trigger('change_screen', { 'screen_name': 'AuctionDetails', auctionItem: this.auctionItem });
     }
 }
+
+AuctionItem.components = {Timer};

@@ -31,4 +31,16 @@ export class Timer extends Component {
               }, 1000);
         });
     }
+
+}
+
+Timer.props = {
+  shoudDisplayFullTimer: {
+    type: Boolean,
+    optional: false,
+  },
+  endDatetime: {
+    type: Object,
+    optional: true,
+  },
 }

@@ -21,10 +21,12 @@ class Auction(models.Model):
     brand_id = fields.Many2one("auction.item.brand")
     categ_id = fields.Many2one("auction.category")
     description = fields.Text()
+    # bidder_id = fields.Many2one('res.partner')
     bid_price = fields.Monetary()
     current_bid_price = fields.Monetary()
     currency_id = fields.Many2one('res.currency', string='Auction Currency', tracking=True, default=lambda self: self.env.company.currency_id)
-    end_date = fields.Datetime("End Time", required=True)
+    start_date = fields.Datetime("Start Date", required=True)
+    end_date = fields.Datetime("End Date", required=True)
 
 class AuctionImages(models.Model):
     _name = "auction.auction.images"
