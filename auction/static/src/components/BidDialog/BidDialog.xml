@@ -2,7 +2,7 @@
 <templates xml:space="preserve">
 
     <t t-name="web.BidDialog" owl="1">
-        <Dialog>
+        <Dialog title="'Place Bid'">
             <div>
                 <div class="mt16 small">
                     <input type="number" class="o_input" t-ref="bid_input"/>
