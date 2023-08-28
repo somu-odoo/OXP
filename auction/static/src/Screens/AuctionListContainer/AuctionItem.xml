@@ -12,10 +12,13 @@
                         <img t-attf-src="/web/image/auction.auction/{{props.auctionItem.id}}/image_512" itemprop="image" class="prod_img img-fluid h-100 w-100" t-att-alt="props.auctionItem.name" loading="lazy"/>
                         <div class="prod_desc">
                             <h3 class="bid_title"><t t-out="props.auctionItem.name"/></h3>
-                            <p class="bid_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis interdum massa et tristique. Quisque egestas, risus et lacinia tempus, ex ex imperdiet ipsum, ac viverra libero odio vitae mi.</p>
+                            <p class="bid_desc" t-out="auctionItem.description"/>
                             <p class="bid_name">Manushi Shah</p>
                             <p class="bid_price"><b>₹<span t-out="auctionItem.bid_price"></span></b></p>
                             <button class="btn_bid_details">Bid Details</button>
+                            <i>
+                                <Timer endDatetime="endDate" shoudDisplayFullTimer="false"/>
+                            </i>
                         </div>
                     </div>
                 </a>

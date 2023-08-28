@@ -2,8 +2,11 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.AuctionCategorySidebar" owl="1">
-        <div class="col-2">
-            <ul class="o_category_list">
+        <div class="col-2 o_category_list text-center mt-4">
+            <div class="auction_category">Sneaker</div>
+            <div class="auction_category">Jacket</div>
+            <div class="auction_category">Clothes</div>
+            <!-- <ul class="o_category_list">
                 <li>
                     <input type="checkbox" name=""/>
                     <span>Sneaker</span>
@@ -16,7 +19,7 @@
                     <input type="checkbox" name=""/>
                     <span>Clothes</span>
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </t>
 </templates>

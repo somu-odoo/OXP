@@ -2,7 +2,7 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.AuctionDetails" owl="1">
-        <div class="m-5">
+        <div class="o_auction_products m-5">
             <div class="px-0 md:px-5 mx-50">
                 <div class="mx-auto d-flex flex-wrap lg:flex-nowrap space-x-0 md:space-x-4">
                     <div class="col-2"></div>
@@ -50,7 +50,7 @@
                         </div>
                         <div class="">
                             <p class="text-600 uppercase"> Ending In:  </p>
-                            <Timer endDatetime="endDate"/>
+                            <Timer endDatetime="endDate" shoudDisplayFullTimer="true"/>
                         </div>
                         <div class="mt-4">
                             <button type="button" class="btn btn-primary" t-on-click="onPlaceBid">Place Bid</button>

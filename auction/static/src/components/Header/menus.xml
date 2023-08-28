@@ -6,10 +6,53 @@
     </t>
 
     <t t-name="auction.menuItem" owl="1">
-        <div class="bid_tabs p-3 d-flex bg-warning justify-content-around">
+        <!-- <div class="bid_tabs p-3 d-flex bg-warning justify-content-around">
             <div><a class="" href="#">Menu 1</a></div>
             <div><a class="" href="#">Menu 2</a></div>
             <div><a class="" href="#">Menu 3</a></div>
+        </div> -->
+        
+        <div class="navigation d-flex justify-content-center">
+            <ul class="pt-1">
+                <li class="list active">
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-solid fa-hourglass-half"></i></span>
+                        <span class="text">Live</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-solid fa-hourglass-end"></i></span>
+                        <span class="text">Past</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-solid fa-hourglass-start"></i></span>
+                        <span class="text">Future</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-solid fa-star"></i></span>
+                        <span class="text">Favorites</span>
+                    </a>
+                </li>
+                <div class="indicator">
+
+                </div>
+            </ul>
         </div>
+        <script>
+            const list = document.querySelectorAll(.list) {
+                function activeLink() {
+                    list.forEach((item) => 
+                        item.classList.remove('active'));
+                        this.classList.add('active')
+                }
+                list.forEach((item) => 
+                    item.addEventListener('click', activeLink));
+            }
+        </script>
     </t>
 </templates>

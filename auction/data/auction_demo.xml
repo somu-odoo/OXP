@@ -19,7 +19,7 @@
         <record id="auction_1" model="auction.auction">
             <field name="name">Sneaker US Polo</field>
             <field name="brand_id" ref="auction.brand_1"></field>
-            <field name="description">US POLO Sneaker for best comfort</field>
+            <field name="description">US POLO Sneaker for best comfort. The US POLO Sneaker is expertly crafted using high-quality materials, ensuring durability and longevity.</field>
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/sneaker4.png"/>
@@ -51,7 +51,7 @@
         <record id="auction_2" model="auction.auction">
             <field name="name">Sneaker Nike</field>
             <field name="brand_id" ref="auction.brand_2"></field>
-            <field name="description">Nike Sneaker for best comfort</field>
+            <field name="description">Nike Sneaker for best comfort. Slip into a world of comfort with the cushioned insole and padded collar of these sneakers.</field>
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/sneaker2.png"/>
@@ -60,7 +60,7 @@
         <record id="auction_3" model="auction.auction">
             <field name="name">Sneaker Redtape</field>
             <field name="brand_id" ref="auction.brand_3"></field>
-            <field name="description">Redtape Sneaker for best comfort</field>
+            <field name="description">Redtape Sneaker for best comfort. The sneakers boast a sleek and versatile design that effortlessly blends with various outfits. </field>
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/sneaker3.png"/>
@@ -69,7 +69,7 @@
         <record id="auction_4" model="auction.auction">
             <field name="name">Sneaker Roadster</field>
             <field name="brand_id" ref="auction.brand_4"></field>
-            <field name="description">Roadster Sneaker for best comfort</field>
+            <field name="description">Roadster Sneaker for best comfort. Thanks to the lace-up closure, you can achieve a secure and customized fit that supports your feet during every step.</field>
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/Sneaker1.png"/>
@@ -95,7 +95,7 @@
         <record id="auction_5" model="auction.auction">
             <field name="name">Sneaker Jack &amp; Jones</field>
             <field name="brand_id" ref="auction.brand_1"></field>
-            <field name="description">Jack &amp; Jones Sneaker for best comfort</field>
+            <field name="description">Jack &amp; Jones Sneaker for best comfort.  The sturdy rubber outsole offers excellent traction and grip on various surfaces.</field>
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/JackAndJones.png"/>
@@ -120,7 +120,7 @@
         <record id="auction_6" model="auction.auction">
             <field name="name">Sneaker Nike</field>
             <field name="brand_id" ref="auction.brand_2"></field>
-            <field name="description">Nike Sneaker for best comfort</field>
+            <field name="description">Nike Sneaker for best comfort.  The sneakers hug your feet snugly, minimizing discomfort even during extended wear.</field>
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/Nike.png"/>
@@ -130,7 +130,7 @@
         <record id="auction_7" model="auction.auction">
             <field name="name">Sneaker Reebok</field>
             <field name="brand_id" ref="auction.brand_3"></field>
-            <field name="description">Redtape Sneaker for best comfort</field>
+            <field name="description">Redtape Sneaker for best comfort. Experience the joy of walking on clouds, whether you're running errands, hitting the gym, or exploring the outdoors.</field>
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/Reebok.png"/>
@@ -150,7 +150,7 @@
         <record id="auction_8" model="auction.auction">
             <field name="name">Sneaker US POLO</field>
             <field name="brand_id" ref="auction.brand_4"></field>
-            <field name="description">US Polo Sneaker for best comfort</field>
+            <field name="description">US Polo Sneaker for best comfort. From jeans and shorts to athleisure wear, these sneakers enhance your style quotient while offering the utmost comfort.</field>
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/uspa.png"/>
