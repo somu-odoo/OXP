@@ -6,20 +6,6 @@
             <div class="auction_category">Sneaker</div>
             <div class="auction_category">Jacket</div>
             <div class="auction_category">Clothes</div>
-            <!-- <ul class="o_category_list">
-                <li>
-                    <input type="checkbox" name=""/>
-                    <span>Sneaker</span>
-                </li>
-                <li>
-                    <input type="checkbox" name=""/>
-                    <span>Jacket</span>
-                </li>
-                <li>
-                    <input type="checkbox" name=""/>
-                    <span>Clothes</span>
-                </li>
-            </ul> -->
         </div>
     </t>
 </templates>

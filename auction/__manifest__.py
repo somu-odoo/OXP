@@ -33,6 +33,23 @@
             'web/static/src/scss/pre_variables.scss',
             'web/static/lib/bootstrap/scss/_variables.scss',
             ('include', 'web._assets_bootstrap'),
+            'web/static/lib/bootstrap/js/dist/dom/data.js',
+            'web/static/lib/bootstrap/js/dist/dom/event-handler.js',
+            'web/static/lib/bootstrap/js/dist/dom/manipulator.js',
+            'web/static/lib/bootstrap/js/dist/dom/selector-engine.js',
+            'web/static/lib/bootstrap/js/dist/base-component.js',
+            'web/static/lib/bootstrap/js/dist/alert.js',
+            'web/static/lib/bootstrap/js/dist/button.js',
+            'web/static/lib/bootstrap/js/dist/carousel.js',
+            'web/static/lib/bootstrap/js/dist/collapse.js',
+            'web/static/lib/bootstrap/js/dist/dropdown.js',
+            'web/static/lib/bootstrap/js/dist/modal.js',
+            'web/static/lib/bootstrap/js/dist/offcanvas.js',
+            'web/static/lib/bootstrap/js/dist/tooltip.js',
+            'web/static/lib/bootstrap/js/dist/popover.js',
+            'web/static/lib/bootstrap/js/dist/scrollspy.js',
+            'web/static/lib/bootstrap/js/dist/tab.js',
+            'web/static/lib/bootstrap/js/dist/toast.js',
 
             'web/static/lib/moment/moment.js', # required for date/datetime operations
             'web/static/src/libs/fontawesome/css/font-awesome.css', # required for fa icons
