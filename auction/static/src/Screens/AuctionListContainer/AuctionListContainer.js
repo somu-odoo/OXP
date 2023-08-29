@@ -19,8 +19,15 @@ export class AuctionListContainer extends Component {
     }
     async willStart() {
         this.datas = await this.auctionFetch();
-        this.auctionItems = this.datas.auctionItems;
+        this.state.items = this.datas.auctionItems;
         this.env.db.save('datas', this.datas);
+    }
+
+    onFilterItems(ev) {
+        const categoryID = ev.detail.id;
+        debugger;
+        const filteredItems = this.env.db.filterAuctionItems(categoryID);
+        this.state.items = filteredItems;
     }
 }
 

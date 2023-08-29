@@ -20,6 +20,19 @@ export class DB extends EventBus {
         this.cache[name] = data;
     }
 
+    filterAuctionItems(categoryID) {
+        const datas = this.load('datas');
+        const auctions = datas.auctionItems;
+        debugger;
+        if (categoryID === 'all') {
+            return auctions;
+        } else {
+            return auctions.filter((auction) => {
+                return auction.categ_id[0] === parseInt(categoryID);
+            });
+        }
+    }
+
     getAuctionItem(id) {
         const datas = this.load('datas');
         const auctions = datas.auctionItems;

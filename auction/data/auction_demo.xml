@@ -261,7 +261,7 @@
         </record>
         <record id="auction_11" model="auction.auction">
             <field name="name">Levis Jacket</field>
-            <field name="categ_id" ref="auction.categ_1"/>
+            <field name="categ_id" ref="auction.categ_2"/>
             <field name="brand_id" ref="auction.brand_8"></field>
             <field name="description">Levis Jacket for best comfort. From jeans and shorts to athleisure wear, these sneakers enhance your style quotient while offering the utmost comfort.</field>
             <field name="bid_price">5000</field>
