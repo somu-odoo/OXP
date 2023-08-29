@@ -3,9 +3,9 @@
 
     <t t-name="auction.AuctionCategorySidebar" owl="1">
         <div class="col-2 o_category_list text-center mt-4">
-            <div class="auction_category">Sneaker</div>
-            <div class="auction_category">Jacket</div>
-            <div class="auction_category">Clothes</div>
+            <div t-foreach="props.categories" t-as="category" t-key="category.id" class="auction_category">
+                <span t-out="category.name"></span>
+            </div>
         </div>
     </t>
 </templates>

@@ -21,7 +21,8 @@ export class DB extends EventBus {
     }
 
     getAuctionItem(id) {
-        const auctions = this.load('auctions');
+        const datas = this.load('datas');
+        const auctions = datas.auctionItems;
         const auction = auctions.find((auction) => auction.id === id);
         return auction
     }
@@ -30,6 +31,6 @@ export class DB extends EventBus {
 export function useFetchAuctions() {
     const env = useEnv();
     return () => {
-        return env.rpc("/get_auction_items", {});
+        return env.rpc("/get_auction_data", {});
     }
 }

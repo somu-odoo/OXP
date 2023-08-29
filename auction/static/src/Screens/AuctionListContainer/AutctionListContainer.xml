@@ -3,7 +3,7 @@
 
     <t t-name="auction.AuctionListContainer" owl="1">
         <div class="row">
-            <AuctionCategorySidebar/>
+            <AuctionCategorySidebar categories="datas.categories"/>
             <AuctionList auctionItems="auctionItems"/>
         </div>
     </t>
