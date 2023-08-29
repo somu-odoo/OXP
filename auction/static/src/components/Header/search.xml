@@ -7,7 +7,7 @@
                 <span class="fw-bold text-capitalize text-center me-3">Search for the products you wanna bid!!</span>
                 <div class="bid_search">
                     <input type="input" class="o_input_search" t-ref="search_input"/>
-                    <button class="p-1 ms-1 bg-warning"><i class="fa fa-search"></i></button>
+                    <button class="p-1 ms-1 bg-warning"><i class="fa fa-search" t-on-click="onClickSearch"></i></button>
                 </div>
             </div>
         </div>
