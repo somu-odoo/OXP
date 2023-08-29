@@ -26,7 +26,6 @@
             <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
             <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
-
         <record id="auction_1_image_1" model="auction.auction.images">
             <field name="name">Front Side</field>
             <field name="auction_id" ref="auction.auction_1"/>
@@ -48,7 +47,6 @@
             <field name="image_1920" type="base64" file="auction/static/images/sneaker4-5.png"/>
         </record>
 
-
         <record id="auction_2" model="auction.auction">
             <field name="name">Sneaker Nike</field>
             <field name="brand_id" ref="auction.brand_2"></field>
@@ -59,6 +57,12 @@
             <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
             <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
+        <record id="auction_2_image_1" model="auction.auction.images">
+            <field name="name">Front Side</field>
+            <field name="auction_id" ref="auction.auction_2"/>
+            <field name="image_1920" type="base64" file="auction/static/images/sneaker2.png"/>
+        </record>
+
         <record id="auction_3" model="auction.auction">
             <field name="name">Sneaker Redtape</field>
             <field name="brand_id" ref="auction.brand_3"></field>
@@ -69,6 +73,12 @@
             <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
             <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
+        <record id="auction_3_image_1" model="auction.auction.images">
+            <field name="name">Front Side</field>
+            <field name="auction_id" ref="auction.auction_3"/>
+            <field name="image_1920" type="base64" file="auction/static/images/sneaker3.png"/>
+        </record>
+
         <record id="auction_4" model="auction.auction">
             <field name="name">Sneaker Roadster</field>
             <field name="brand_id" ref="auction.brand_4"></field>
@@ -79,7 +89,6 @@
             <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
             <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
-
         <record id="auction_4_image_1" model="auction.auction.images">
             <field name="name">Front Side</field>
             <field name="auction_id" ref="auction.auction_4"/>
@@ -132,6 +141,11 @@
             <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
             <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
+        <record id="auction_6_image_1" model="auction.auction.images">
+            <field name="name">Right Side</field>
+            <field name="auction_id" ref="auction.auction_6"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Nike.png"/>
+        </record>
 
         <record id="auction_7" model="auction.auction">
             <field name="name">Sneaker Reebok</field>
@@ -164,7 +178,6 @@
             <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
             <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
-
         <record id="auction_8_image_1" model="auction.auction.images">
             <field name="name">Front Side</field>
             <field name="auction_id" ref="auction.auction_8"/>

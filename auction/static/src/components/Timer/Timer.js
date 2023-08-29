@@ -33,14 +33,3 @@ export class Timer extends Component {
     }
 
 }
-
-Timer.props = {
-  shoudDisplayFullTimer: {
-    type: Boolean,
-    optional: false,
-  },
-  endDatetime: {
-    type: Object,
-    optional: true,
-  },
-}

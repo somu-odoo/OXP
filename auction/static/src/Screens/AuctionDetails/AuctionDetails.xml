@@ -6,30 +6,32 @@
             <div class="px-0 md:px-5 mx-50">
                 <div class="mx-auto d-flex flex-wrap lg:flex-nowrap space-x-0 md:space-x-4">
                     <div class="col-2"></div>
-                    <div class="w-full lg:h-auto">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <div class="card">
+                        <div class="w-full lg:h-auto">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <t t-set="count" t-value="0"/>
+                                    <div t-attf-class="carousel-item {{count == 0 and 'active' or ''}}" t-foreach="auctionItem.images" t-as="image" t-key="image.id">
+                                        <img t-attf-src="data:image/png;base64,{{image.image_512}}" itemprop="image" class="o_detail_image img img-fluid h-100 w-100" t-att-alt="auctionItem.name" loading="lazy"/>
+                                        <t t-set="count" t-value="count + 1"/>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
-                            <div class="carousel-inner">
-                              <t t-set="count" t-value="0"/>  
-                              <div t-attf-class="carousel-item {{count == 0 and 'active' or ''}}" t-foreach="auctionItem.images" t-as="image" t-key="image.id">
-                                <img t-attf-src="data:image/png;base64,{{image.image_512}}" itemprop="image" class="o_detail_image img img-fluid h-100 w-100" t-att-alt="auctionItem.name" loading="lazy"/>
-                                <t t-set="count" t-value="count + 1"/>
-                              </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                          </div>
+                        </div>
                     </div>
                     <div class="col-4 w-full px-5 flex flex-col flex-auto justify-between">
                         <div>
@@ -49,7 +51,7 @@
                         </div>
                         <div class="">
                             <p class="text-600 uppercase"> Ending In:  </p>
-                            <Timer endDatetime="endDate" shoudDisplayFullTimer="true"/>
+                            <Timer endDatetime="endDate" displayFullTimer="true"/>
                         </div>
                         <div class="mt-4">
                             <button type="button" class="btn btn-primary" t-on-click="onPlaceBid">Place Bid</button>
@@ -61,18 +63,5 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="row pt-4">
-            <div class="col-5">
-                <img t-attf-src="/web/image/auction.auction/{{auctionItem.id}}/image_512" itemprop="image" class="o_detail_image img img-fluid h-100 w-100" t-att-alt="auctionItem.name" loading="lazy"/>
-            </div>
-            <div class="col-7">
-                <h5 t-out="auctionItem.name"></h5>
-                <span t-out="auctionItem.description"/>
-                <Timer endDatetime="endDate"/>
-                <div>
-                    <b>Bid Price: ₹<span t-out="auctionItem.bid_price"></span></b>
-                </div>
-            </div>
-        </div> -->
     </t>
 </templates>
