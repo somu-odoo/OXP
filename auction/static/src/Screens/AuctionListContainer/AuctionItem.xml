@@ -17,7 +17,7 @@
                             <p class="bid_price"><b>₹<span t-out="props.auctionItem.bid_price"></span></b></p>
                             <button class="btn_bid_details">Bid Details</button>
                             <i>
-                                <Timer endDatetime="endDate" shoudDisplayFullTimer="false"/>
+                                <Timer endDatetime="endDate" displayFullTimer="false"/>
                             </i>
                         </div>
                     </div>
