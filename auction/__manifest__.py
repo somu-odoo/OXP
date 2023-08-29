@@ -27,6 +27,9 @@
         'data/auction_demo.xml',
     ],
     'assets': {
+        'web.assets_backend': [
+            'auction/static/src/backend/**/*',
+        ],
         'auction.assets_auction': [
             # bootstrap
             ('include', 'web._assets_helpers'),
@@ -68,7 +71,13 @@
             'web/static/src/core/registry.js',
             'web/static/src/core/assets.js',
 
-            'auction/static/src/**/*',
+            'auction/static/src/components/**/*',
+            'auction/static/src/core/**/*',
+            'auction/static/src/Screens/**/*',
+            'auction/static/src/utils/**/*',
+            'auction/static/src/main.js',
+            'auction/static/src/auction.js',
+            'auction/static/src/auction.xml',
             'auction/static/src/auction.css',
         ],
     }

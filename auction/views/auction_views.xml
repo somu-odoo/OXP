@@ -28,12 +28,14 @@
                         <group>
                             <group>
                                 <field name="name"/>
+                                <field name="bidder_id"/>
                                 <field name="brand_id"/>
                                 <field name="categ_id"/>
                             </group>
                             <group>
+                                <field name="bid_increment_amount"/>
                                 <field name="bid_price"/>
-                                <field name="current_bid_price"/>
+                                <field name="current_bid_price" widget="increment"/>
                                 <field name="end_date"/>
                             </group>
                         </group>
