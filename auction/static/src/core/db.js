@@ -20,8 +20,22 @@ export class DB extends EventBus {
         this.cache[name] = data;
     }
 
+    filterAuctionItems(categoryID) {
+        const datas = this.load('datas');
+        const auctions = datas.auctionItems;
+        debugger;
+        if (categoryID === 'all') {
+            return auctions;
+        } else {
+            return auctions.filter((auction) => {
+                return auction.categ_id[0] === parseInt(categoryID);
+            });
+        }
+    }
+
     getAuctionItem(id) {
-        const auctions = this.load('auctions');
+        const datas = this.load('datas');
+        const auctions = datas.auctionItems;
         const auction = auctions.find((auction) => auction.id === id);
         return auction
     }
@@ -30,6 +44,6 @@ export class DB extends EventBus {
 export function useFetchAuctions() {
     const env = useEnv();
     return () => {
-        return env.rpc("/get_auction_items", {});
+        return env.rpc("/get_auction_data", {});
     }
 }

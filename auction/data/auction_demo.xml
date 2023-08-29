@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+
+        <!-- Category Records -->
+        <record id="categ_1" model="auction.category">
+            <field name="name">Footwear</field>
+        </record>
+        <record id="categ_2" model="auction.category">
+            <field name="name">Topwear</field>
+        </record>
+        <record id="categ_3" model="auction.category">
+            <field name="name">Bottomwear</field>
+        </record>
+        <record id="categ_4" model="auction.category">
+            <field name="name">Sports Wear</field>
+        </record>
+        <record id="categ_5" model="auction.category">
+            <field name="name">Fashion Accessories</field>
+        </record>
+        <record id="categ_6" model="auction.category">
+            <field name="name">Gadgets</field>
+        </record>
+
         <!-- Brand Records -->
         <record id="brand_1" model="auction.item.brand">
             <field name="name">US Polo</field>
@@ -12,12 +33,28 @@
             <field name="name">Redtape</field>
         </record>
         <record id="brand_4" model="auction.item.brand">
-            <field name="name">Roadster</field>
+            <field name="name">Reebok</field>
+        </record>
+        <record id="brand_5" model="auction.item.brand">
+            <field name="name">Jack &amp; Jones</field>
+        </record>
+        <record id="brand_6" model="auction.item.brand">
+            <field name="name">Noise</field>
+        </record>
+        <record id="brand_7" model="auction.item.brand">
+            <field name="name">Firebolt</field>
+        </record>
+        <record id="brand_8" model="auction.item.brand">
+            <field name="name">Levis</field>
+        </record>
+        <record id="brand_9" model="auction.item.brand">
+            <field name="name">Zara</field>
         </record>
 
         <!-- Auction Records -->
         <record id="auction_1" model="auction.auction">
             <field name="name">Sneaker US Polo</field>
+            <field name="categ_id" ref="auction.categ_1"/>
             <field name="brand_id" ref="auction.brand_1"></field>
             <field name="description">US POLO Sneaker for best comfort. The US POLO Sneaker is expertly crafted using high-quality materials, ensuring durability and longevity.</field>
             <field name="bid_price">5000</field>
@@ -49,6 +86,7 @@
 
         <record id="auction_2" model="auction.auction">
             <field name="name">Sneaker Nike</field>
+            <field name="categ_id" ref="auction.categ_1"/>
             <field name="brand_id" ref="auction.brand_2"></field>
             <field name="description">Nike Sneaker for best comfort. Slip into a world of comfort with the cushioned insole and padded collar of these sneakers.</field>
             <field name="bid_price">5000</field>
@@ -65,6 +103,7 @@
 
         <record id="auction_3" model="auction.auction">
             <field name="name">Sneaker Redtape</field>
+            <field name="categ_id" ref="auction.categ_1"/>
             <field name="brand_id" ref="auction.brand_3"></field>
             <field name="description">Redtape Sneaker for best comfort. The sneakers boast a sleek and versatile design that effortlessly blends with various outfits. </field>
             <field name="bid_price">5000</field>
@@ -81,6 +120,7 @@
 
         <record id="auction_4" model="auction.auction">
             <field name="name">Sneaker Roadster</field>
+            <field name="categ_id" ref="auction.categ_1"/>
             <field name="brand_id" ref="auction.brand_4"></field>
             <field name="description">Roadster Sneaker for best comfort. Thanks to the lace-up closure, you can achieve a secure and customized fit that supports your feet during every step.</field>
             <field name="bid_price">5000</field>
@@ -107,6 +147,7 @@
 
         <record id="auction_5" model="auction.auction">
             <field name="name">Sneaker Jack &amp; Jones</field>
+            <field name="categ_id" ref="auction.categ_1"/>
             <field name="brand_id" ref="auction.brand_1"></field>
             <field name="description">Jack &amp; Jones Sneaker for best comfort.  The sturdy rubber outsole offers excellent traction and grip on various surfaces.</field>
             <field name="bid_price">5000</field>
@@ -133,6 +174,7 @@
 
         <record id="auction_6" model="auction.auction">
             <field name="name">Sneaker Nike</field>
+            <field name="categ_id" ref="auction.categ_1"/>
             <field name="brand_id" ref="auction.brand_2"></field>
             <field name="description">Nike Sneaker for best comfort.  The sneakers hug your feet snugly, minimizing discomfort even during extended wear.</field>
             <field name="bid_price">5000</field>
@@ -149,6 +191,7 @@
 
         <record id="auction_7" model="auction.auction">
             <field name="name">Sneaker Reebok</field>
+            <field name="categ_id" ref="auction.categ_1"/>
             <field name="brand_id" ref="auction.brand_3"></field>
             <field name="description">Redtape Sneaker for best comfort. Experience the joy of walking on clouds, whether you're running errands, hitting the gym, or exploring the outdoors.</field>
             <field name="bid_price">5000</field>
@@ -170,6 +213,7 @@
 
         <record id="auction_8" model="auction.auction">
             <field name="name">Sneaker US POLO</field>
+            <field name="categ_id" ref="auction.categ_1"/>
             <field name="brand_id" ref="auction.brand_4"></field>
             <field name="description">US Polo Sneaker for best comfort. From jeans and shorts to athleisure wear, these sneakers enhance your style quotient while offering the utmost comfort.</field>
             <field name="bid_price">5000</field>
@@ -191,6 +235,84 @@
         <record id="auction_8_image_3" model="auction.auction.images">
             <field name="auction_id" ref="auction.auction_8"/>
             <field name="image_1920" type="base64" file="auction/static/images/uspa4.png"/>
+        </record>
+
+        <record id="auction_9" model="auction.auction">
+            <field name="name">Blue Jeans</field>
+            <field name="categ_id" ref="auction.categ_3"/>
+            <field name="brand_id" ref="auction.brand_8"></field>
+            <field name="description">Levis Jeans for best comfort. From jeans and shorts to athleisure wear, these sneakers enhance your style quotient while offering the utmost comfort.</field>
+            <field name="bid_price">5000</field>
+            <field name="current_bid_price">5200</field>
+            <field name="image_1920" type="base64" file="auction/static/images/Jeans-1-2.png"/>
+            <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        </record>
+        <record id="auction_10" model="auction.auction">
+            <field name="name">Zara Jacket</field>
+            <field name="categ_id" ref="auction.categ_2"/>
+            <field name="brand_id" ref="auction.brand_9"></field>
+            <field name="description">Zara Jacket for best comfort. From jeans and shorts to athleisure wear, these sneakers enhance your style quotient while offering the utmost comfort.</field>
+            <field name="bid_price">5000</field>
+            <field name="current_bid_price">5200</field>
+            <field name="image_1920" type="base64" file="auction/static/images/Jacket1-1.png"/>
+            <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        </record>
+        <record id="auction_11" model="auction.auction">
+            <field name="name">Levis Jacket</field>
+            <field name="categ_id" ref="auction.categ_2"/>
+            <field name="brand_id" ref="auction.brand_8"></field>
+            <field name="description">Levis Jacket for best comfort. From jeans and shorts to athleisure wear, these sneakers enhance your style quotient while offering the utmost comfort.</field>
+            <field name="bid_price">5000</field>
+            <field name="current_bid_price">5200</field>
+            <field name="image_1920" type="base64" file="auction/static/images/Jacket2-1.png"/>
+            <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        </record>
+        <record id="auction_12" model="auction.auction">
+            <field name="name">Swimming Googles</field>
+            <field name="categ_id" ref="auction.categ_4"/>
+            <field name="brand_id" ref="auction.brand_4"></field>
+            <field name="description">Reebok for best comfort. From jeans and shorts to athleisure wear, these sneakers enhance your style quotient while offering the utmost comfort.</field>
+            <field name="bid_price">5000</field>
+            <field name="current_bid_price">5200</field>
+            <field name="image_1920" type="base64" file="auction/static/images/Sports-1-1.png"/>
+            <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        </record>
+        <record id="auction_13" model="auction.auction">
+            <field name="name">Jack &amp; Jones Cap</field>
+            <field name="categ_id" ref="auction.categ_5"/>
+            <field name="brand_id" ref="auction.brand_5"></field>
+            <field name="description">Jack &amp; Jones Cap for best comfort. From jeans and shorts to athleisure wear, these sneakers enhance your style quotient while offering the utmost comfort.</field>
+            <field name="bid_price">5000</field>
+            <field name="current_bid_price">5200</field>
+            <field name="image_1920" type="base64" file="auction/static/images/Cap-1-1.png"/>
+            <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        </record>
+        <record id="auction_14" model="auction.auction">
+            <field name="name">Noise Smart Watch</field>
+            <field name="categ_id" ref="auction.categ_6"/>
+            <field name="brand_id" ref="auction.brand_6"></field>
+            <field name="description">Noise Smart Watch for best comfort. From jeans and shorts to athleisure wear, these sneakers enhance your style quotient while offering the utmost comfort.</field>
+            <field name="bid_price">5000</field>
+            <field name="current_bid_price">5200</field>
+            <field name="image_1920" type="base64" file="auction/static/images/Watch-1-1.png"/>
+            <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        </record>
+        <record id="auction_15" model="auction.auction">
+            <field name="name">Firebolt Smart Watch</field>
+            <field name="categ_id" ref="auction.categ_6"/>
+            <field name="brand_id" ref="auction.brand_7"></field>
+            <field name="description">Firebolt Smart Watch for best comfort. From jeans and shorts to athleisure wear, these sneakers enhance your style quotient while offering the utmost comfort.</field>
+            <field name="bid_price">5000</field>
+            <field name="current_bid_price">5200</field>
+            <field name="image_1920" type="base64" file="auction/static/images/Watch-2-1.png"/>
+            <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
     </data>
 </odoo>

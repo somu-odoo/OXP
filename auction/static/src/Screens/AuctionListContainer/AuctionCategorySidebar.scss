@@ -1,14 +1,15 @@
-// .o_auction .o_category_list {
-//     list-style: none;
-//     li > span {
-//         margin-left: 8px;
-//     }
-// }
-
 .auction_category {
     height: 50px;
     padding: 10px;
     cursor: pointer;
     border-radius: 3px;
     background: #eeeeee;
+    &.active {
+        background: black;
+        color: white;
+    }
+    &:hover:not(.active) {
+        background: grey;
+        color: white;
+    }
 }
