@@ -18,6 +18,7 @@ owl.whenReady(async () => {
     const db = new DB();
     const env = { bus, db, rpc };
 
+    env.activeMenuItem = 'live';
     const app = new App(Auction, {
         name: "Auction",
         env,

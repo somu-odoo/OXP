@@ -20,17 +20,26 @@ export class DB extends EventBus {
         this.cache[name] = data;
     }
 
-    filterAuctionItems(categoryID) {
+    filterAuctionItems(categoryID, activeMenuItem) {
         const datas = this.load('datas');
         const auctions = datas.auctionItems;
-        debugger;
+        let filteredAuctionItems;
         if (categoryID === 'all') {
-            return auctions;
+            filteredAuctionItems = auctions;
         } else {
-            return auctions.filter((auction) => {
+            filteredAuctionItems = auctions.filter((auction) => {
                 return auction.categ_id[0] === parseInt(categoryID);
             });
         }
+
+        if (activeMenuItem === 'live') {
+            debugger;
+        } else if (activeMenuItem === 'past') {
+            debugger;
+        } else if (activeMenuItem === 'future') {
+            debugger;
+        }
+        return filterAuctionItems;
     }
 
     getAuctionItem(id) {

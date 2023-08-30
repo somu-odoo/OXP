@@ -2,37 +2,22 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.menus" owl="1">
-        <MenuItem />
+        <div class="navigation d-flex justify-content-center" t-ref="menu" t-on-menu-changed="onMenuChanged">
+            <ul class="pt-1">
+                <MenuItem iconClass="'fa-hourglass-half'" name="'live'" string="'Live'" active="state.activeMenuItem === 'live' and true or false"/>
+                <MenuItem iconClass="'fa-hourglass-end'" name="'past'" string="'Past'" active="state.activeMenuItem === 'past' and true or false"/>
+                <MenuItem iconClass="'fa-hourglass-start'" name="'future'" string="'Future'" active="state.activeMenuItem === 'future' and true or false"/>
+                <MenuItem iconClass="'fa-star'" name="'favorites'" string="'Favorites'" active="state.activeMenuItem === 'favorites' and true or false"/>
+            </ul>
+        </div>
     </t>
 
     <t t-name="auction.menuItem" owl="1">
-        <div class="navigation d-flex justify-content-center">
-            <ul class="pt-1">
-                <li class="list active">
-                    <a href="#">
-                        <span class="icon"><i class="fa fa-solid fa-hourglass-half"></i></span>
-                        <span class="text">Live</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon"><i class="fa fa-solid fa-hourglass-end"></i></span>
-                        <span class="text">Past</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon"><i class="fa fa-solid fa-hourglass-start"></i></span>
-                        <span class="text">Future</span>
-                    </a>
-                </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon"><i class="fa fa-solid fa-star"></i></span>
-                        <span class="text">Favorites</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <li t-attf-class="list {{props.active and 'active' or ''}}" t-ref="menuItem">
+            <a href="#" t-on-click.prevent="onActivateMenu" t-att-data-name="props.name">
+                <span class="icon"><i t-attf-class="fa fa-solid {{props.iconClass}}"></i></span>
+                <span class="text" t-out="props.string"></span>
+            </a>
+        </li>
     </t>
 </templates>

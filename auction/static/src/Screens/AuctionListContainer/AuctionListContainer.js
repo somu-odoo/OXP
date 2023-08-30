@@ -13,9 +13,12 @@ export class AuctionListContainer extends Component {
         super.setup();
         this.state = useState({
             items: [],
+            activeCategory: 'all',
+            activeMenuItem: 'live',
         });
         onWillStart(this.willStart);
         this.auctionFetch = useFetchAuctions();
+        this.env.bus.addEventListener("change_active_menu", this.onChangeActiveMenu.bind(this));
     }
     async willStart() {
         this.datas = await this.auctionFetch();
@@ -23,10 +26,18 @@ export class AuctionListContainer extends Component {
         this.env.db.save('datas', this.datas);
     }
 
+    onChangeActiveMenu(ev) {
+        const menuName = ev.detail.menu_name;
+        const filteredItems = this.env.db.filterAuctionItems(this.state.activeCategory, menuName);
+        this.state.items = filteredItems;
+        this.state.activeMenuItem = menuName;
+    }
+
     onFilterItems(ev) {
         const categoryID = ev.detail.id;
-        const filteredItems = this.env.db.filterAuctionItems(categoryID);
+        const filteredItems = this.env.db.filterAuctionItems(categoryID, this.state.activeMenuItem);
         this.state.items = filteredItems;
+        this.state.activeCategory = categoryID;
     }
 }
 
