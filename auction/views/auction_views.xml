@@ -35,7 +35,7 @@
                             <group>
                                 <field name="bid_increment_amount"/>
                                 <field name="bid_price"/>
-                                <field name="current_bid_price" widget="increment"/>
+                                <field name="current_bid_price" widget="increment" options="{'increment_field': 'bid_increment_amount'}"/>
                                 <field name="end_date"/>
                             </group>
                         </group>

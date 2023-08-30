@@ -22,7 +22,7 @@ class Auction(models.Model):
     categ_id = fields.Many2one("auction.category")
     description = fields.Text()
     bidder_id = fields.Many2one('res.partner')
-    bid_increment_amount = fields.Integer()
+    bid_increment_amount = fields.Integer(default=10)
     bid_price = fields.Monetary()
     current_bid_price = fields.Monetary()
     currency_id = fields.Many2one('res.currency', string='Auction Currency', tracking=True, default=lambda self: self.env.company.currency_id)

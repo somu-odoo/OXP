@@ -2,9 +2,11 @@
 <templates xml:space="preserve">
 
     <t t-name="web.FieldIncrement" owl="1">
-        <div>
-            <t t-debug="True"/>
-            <span>Hello World</span>
+        <span t-if="props.readonly" t-esc="formattedValue" />
+        <div t-else="" class="o_field_increment">
+            <span data-icon="+" t-on-click="onClickIcon"><i class="fa fa-plus"/></span>
+            <input t-ref="incrementInteger" t-att-id="props.id" t-att-type="props.inputType" t-att-placeholder="props.placeholder" inputmode="numeric" class="o_input" t-att-step="props.step" />
+            <span data-icon="-" t-on-click="onClickIcon"><i class="fa fa-minus"/></span>
         </div>
     </t>
 </templates>
