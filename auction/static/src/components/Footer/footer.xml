@@ -2,9 +2,9 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.footer" owl="1">
-        <footer class="o_footer position-sticky bottom-0">
+        <footer class="o_footer position-fixed bottom-0">
             <Menus />
-            <div class="text-center bg-black text-white">© 2023 Odoo S.A. All Rights Reserved</div>
+            <!-- <div class="text-center bg-black text-white">© 2023 Odoo S.A. All Rights Reserved</div> -->
         </footer>
     </t>
 </templates>

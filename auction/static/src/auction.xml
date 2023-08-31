@@ -2,9 +2,11 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.root" owl="1">
-        <Header/>
-        <Container tname="mainScreen.name" component="mainScreen.component" mainScreenProps="mainScreenPropsFielded"/>
-        <Footer/>
-        <DialogContainer dialogs="dialogs"/>
+        <div class="overflow-hidden">
+            <Header/>
+            <Container tname="mainScreen.name" component="mainScreen.component" mainScreenProps="mainScreenPropsFielded"/>
+            <Footer/>
+            <DialogContainer dialogs="dialogs"/>
+        </div>
     </t>
 </templates>
