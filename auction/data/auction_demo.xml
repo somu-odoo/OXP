@@ -248,6 +248,12 @@
             <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
             <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
+        <record id="auction_9_image_1" model="auction.auction.images">
+            <field name="name">Front Side</field>
+            <field name="auction_id" ref="auction.auction_9"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Jeans-1-2.png"/>
+        </record>
+
         <record id="auction_10" model="auction.auction">
             <field name="name">Zara Jacket</field>
             <field name="categ_id" ref="auction.categ_2"/>
@@ -259,6 +265,22 @@
             <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
             <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
+        <record id="auction_10_image_1" model="auction.auction.images">
+            <field name="name">Front Side</field>
+            <field name="auction_id" ref="auction.auction_10"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Jacket1-1.png"/>
+        </record>
+        <record id="auction_10_image_2" model="auction.auction.images">
+            <field name="name">Right Side</field>
+            <field name="auction_id" ref="auction.auction_10"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Jacket1-2.png"/>
+        </record>
+        <record id="auction_10_image_3" model="auction.auction.images">
+            <field name="name">Back Side</field>
+            <field name="auction_id" ref="auction.auction_10"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Jacket1-3.png"/>
+        </record>
+
         <record id="auction_11" model="auction.auction">
             <field name="name">Levis Jacket</field>
             <field name="categ_id" ref="auction.categ_2"/>
@@ -270,6 +292,22 @@
             <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
             <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
+        <record id="auction_11_image_1" model="auction.auction.images">
+            <field name="name">Front Side</field>
+            <field name="auction_id" ref="auction.auction_11"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Jacket2-1.png"/>
+        </record>
+        <record id="auction_11_image_2" model="auction.auction.images">
+            <field name="name">Right Side</field>
+            <field name="auction_id" ref="auction.auction_11"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Jacket2-2.png"/>
+        </record>
+        <record id="auction_11_image_3" model="auction.auction.images">
+            <field name="name">Back Side</field>
+            <field name="auction_id" ref="auction.auction_11"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Jacket2-3.png"/>
+        </record>
+
         <record id="auction_12" model="auction.auction">
             <field name="name">Swimming Googles</field>
             <field name="categ_id" ref="auction.categ_4"/>
@@ -281,6 +319,22 @@
             <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
             <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
+        <record id="auction_12_image_1" model="auction.auction.images">
+            <field name="name">Front Side</field>
+            <field name="auction_id" ref="auction.auction_12"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Sports-1-1.png"/>
+        </record>
+        <record id="auction_12_image_2" model="auction.auction.images">
+            <field name="name">Left Side</field>
+            <field name="auction_id" ref="auction.auction_12"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Sport1-3.png"/>
+        </record>
+        <record id="auction_12_image_3" model="auction.auction.images">
+            <field name="name">Back Side</field>
+            <field name="auction_id" ref="auction.auction_12"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Sports-1-2.png"/>
+        </record>
+
         <record id="auction_13" model="auction.auction">
             <field name="name">Jack &amp; Jones Cap</field>
             <field name="categ_id" ref="auction.categ_5"/>
@@ -292,6 +346,17 @@
             <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
             <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
+        <record id="auction_13_image_1" model="auction.auction.images">
+            <field name="name">Front Side</field>
+            <field name="auction_id" ref="auction.auction_13"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Cap-1-1.png"/>
+        </record>
+        <record id="auction_13_image_2" model="auction.auction.images">
+            <field name="name">Back Side</field>
+            <field name="auction_id" ref="auction.auction_13"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Cap-1-2.png"/>
+        </record>
+
         <record id="auction_14" model="auction.auction">
             <field name="name">Noise Smart Watch</field>
             <field name="categ_id" ref="auction.categ_6"/>
@@ -303,6 +368,17 @@
             <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
             <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
+        <record id="auction_14_image_1" model="auction.auction.images">
+            <field name="name">Front Side</field>
+            <field name="auction_id" ref="auction.auction_14"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Watch-1-1.png"/>
+        </record>
+        <record id="auction_14_image_2" model="auction.auction.images">
+            <field name="name">Back Side</field>
+            <field name="auction_id" ref="auction.auction_14"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Watch-1-2.png"/>
+        </record>
+
         <record id="auction_15" model="auction.auction">
             <field name="name">Firebolt Smart Watch</field>
             <field name="categ_id" ref="auction.categ_6"/>
@@ -313,6 +389,21 @@
             <field name="image_1920" type="base64" file="auction/static/images/Watch-2-1.png"/>
             <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
             <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        </record>
+        <record id="auction_15_image_1" model="auction.auction.images">
+            <field name="name">Front Side</field>
+            <field name="auction_id" ref="auction.auction_15"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Watch-2-1.png"/>
+        </record>
+        <record id="auction_15_image_2" model="auction.auction.images">
+            <field name="name">Back Side</field>
+            <field name="auction_id" ref="auction.auction_15"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Watch-2-2.png"/>
+        </record>
+        <record id="auction_15_image_3" model="auction.auction.images">
+            <field name="name">Left Side</field>
+            <field name="auction_id" ref="auction.auction_15"/>
+            <field name="image_1920" type="base64" file="auction/static/images/Watch-2-3.png"/>
         </record>
     </data>
 </odoo>

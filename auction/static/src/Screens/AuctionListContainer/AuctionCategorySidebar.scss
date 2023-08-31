@@ -9,7 +9,29 @@
         color: white;
     }
     &:hover:not(.active) {
-        background: grey;
-        color: white;
+        // background: grey;
+        // color: white;
     }
+}
+
+.category_selected {
+    position: relative;
+    transition: all 0.4s;
+}
+
+.category_selected::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    opacity: 0;
+    transition: all 0.5s;
+    pointer-events: none;
+}
+
+.category_selected:hover::after{
+    opacity: 1;
 }
