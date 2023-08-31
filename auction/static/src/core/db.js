@@ -20,17 +20,35 @@ export class DB extends EventBus {
         this.cache[name] = data;
     }
 
-    filterAuctionItems(categoryID) {
+    filterAuctionItems(categoryID, activeMenuItem) {
         const datas = this.load('datas');
         const auctions = datas.auctionItems;
-        debugger;
+        let filteredAuctionItems;
         if (categoryID === 'all') {
-            return auctions;
+            filteredAuctionItems = auctions;
         } else {
-            return auctions.filter((auction) => {
+            filteredAuctionItems = auctions.filter((auction) => {
                 return auction.categ_id[0] === parseInt(categoryID);
             });
         }
+
+        if (activeMenuItem === 'live') {
+            filteredAuctionItems = filteredAuctionItems.filter((auction) => {
+                const endDate = moment(auction.end_date, 'YYYY-MM-DD hh:mm:ss');
+                return endDate >= moment();
+            });
+        } else if (activeMenuItem === 'past') {
+            filteredAuctionItems = filteredAuctionItems.filter((auction) => {
+                const endDate = moment(auction.end_date, 'YYYY-MM-DD hh:mm:ss');
+                return auction.endDate <= moment();
+            });
+        } else if (activeMenuItem === 'future') {
+            filteredAuctionItems = filteredAuctionItems.filter((auction) => {
+                const startDate = moment(auction.start_date, 'YYYY-MM-DD hh:mm:ss');
+                return startDate > moment();
+            });
+        }
+        return filteredAuctionItems;
     }
 
     getAuctionItem(id) {

@@ -18,6 +18,11 @@
             height: 70px;
             z-index: 1;
             padding-top: 8px;
+            &.active a {
+                .icon, .text {
+                    color: white;
+                }
+            }
 
             a {
                 position: relative;

@@ -3,7 +3,7 @@
 import { browser } from "@web/core/browser/browser";
 import { rpc } from "./core/rpc.js";
 import { DB } from "./core/db.js";
-import { mount, EventBus } from "@odoo/owl";
+import { App, mount, EventBus } from "@odoo/owl";
 import { templates } from "@web/core/assets";
 import { Auction } from "./auction";
 
@@ -13,11 +13,21 @@ import { Auction } from "./auction";
 // In the mount options, it's also possible to add other interresting
 // configuration: https://github.com/odoo/owl/blob/master/doc/reference/app.md#configuration
 
-owl.whenReady( () => {
+owl.whenReady(async () => {
     const bus = new EventBus();
     const db = new DB();
     const env = { bus, db, rpc };
-    mount(Auction, document.body, { templates, dev: true, env });
+
+    env.activeMenuItem = 'live';
+    const app = new App(Auction, {
+        name: "Auction",
+        env,
+        templates,
+        dev: true,
+    });
+    const root = await app.mount(document.body);
+
+    // mount(Auction, document.body, { templates, dev: true, env });
 });
 
 /**
