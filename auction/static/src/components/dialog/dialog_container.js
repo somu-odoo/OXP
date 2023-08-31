@@ -1,9 +1,13 @@
 /** @odoo-module **/
 
 import { WithEnv } from "../../utils/withenv";
-import { Component, xml } from "@odoo/owl";
+import { Component, onError, xml } from "@odoo/owl";
 
 export class DialogContainer extends Component {
+    setup() {
+        onError(this.handleError);
+    }
+
     handleError(error, dialog) {
         dialog.props.close();
         Promise.resolve().then(() => {
