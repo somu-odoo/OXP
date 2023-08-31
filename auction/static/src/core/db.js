@@ -33,13 +33,22 @@ export class DB extends EventBus {
         }
 
         if (activeMenuItem === 'live') {
-            debugger;
+            filteredAuctionItems = filteredAuctionItems.filter((auction) => {
+                const endDate = moment(auction.end_date, 'YYYY-MM-DD hh:mm:ss');
+                return endDate >= moment();
+            });
         } else if (activeMenuItem === 'past') {
-            debugger;
+            filteredAuctionItems = filteredAuctionItems.filter((auction) => {
+                const endDate = moment(auction.end_date, 'YYYY-MM-DD hh:mm:ss');
+                return auction.endDate <= moment();
+            });
         } else if (activeMenuItem === 'future') {
-            debugger;
+            filteredAuctionItems = filteredAuctionItems.filter((auction) => {
+                const startDate = moment(auction.start_date, 'YYYY-MM-DD hh:mm:ss');
+                return startDate > moment();
+            });
         }
-        return filterAuctionItems;
+        return filteredAuctionItems;
     }
 
     getAuctionItem(id) {
