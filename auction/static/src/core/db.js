@@ -35,12 +35,13 @@ export class DB extends EventBus {
         if (activeMenuItem === 'live') {
             filteredAuctionItems = filteredAuctionItems.filter((auction) => {
                 const endDate = moment(auction.end_date, 'YYYY-MM-DD hh:mm:ss');
-                return endDate >= moment();
+                const startDate = moment(auction.start_date, 'YYYY-MM-DD hh:mm:ss');
+                return endDate >= moment() && startDate <= moment();
             });
         } else if (activeMenuItem === 'past') {
             filteredAuctionItems = filteredAuctionItems.filter((auction) => {
                 const endDate = moment(auction.end_date, 'YYYY-MM-DD hh:mm:ss');
-                return auction.endDate <= moment();
+                return endDate <= moment();
             });
         } else if (activeMenuItem === 'future') {
             filteredAuctionItems = filteredAuctionItems.filter((auction) => {

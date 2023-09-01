@@ -45,16 +45,16 @@
                                 <p>$<t t-out="auctionItem.bid_price"/></p>
                             </div>
                             <div class="flex flex-col justify-between">
-                                <p class="text-500 uppercase"> Estimated Value </p>
-                                <p> $2,000 </p>
+                                <p class="text-500 uppercase"> Last Bid Value: </p>
+                                <p>$<t t-out="auctionItem.current_bid_price"/></p>
                             </div>
                         </div>
                         <div class="">
                             <p class="text-600 uppercase"> Ending In:  </p>
-                            <Timer endDatetime="endDate" displayFullTimer="true"/>
+                            <Timer startDatetime="startDate" endDatetime="endDate" displayFullTimer="true"/>
                         </div>
                         <div class="mt-4">
-                            <button type="button" class="btn btn-primary" t-on-click="onPlaceBid">Place Bid</button>
+                            <button type="button" class="btn btn_warning fw-bold" t-on-click="onPlaceBid">Place Bid</button>
                         </div>
                     </div>
                 </div>

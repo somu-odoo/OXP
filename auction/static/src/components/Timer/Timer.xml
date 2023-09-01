@@ -24,10 +24,18 @@
         </t>
         <t t-else="">
             <div class="d-flex p-1 text-black float-end mr30">
-                <div><t t-out="state.days"/> : </div>
-                <div><t t-out="state.hours"/> : </div>
-                <div><t t-out="state.minutes"/> : </div>
-                <div><t t-out="state.seconds"/> </div>
+                <t t-if="state.shouldTimerDisplay==0">
+                    <div class="bg-red fw-bold"> Already Completed </div>
+                </t>
+                <t t-elif="state.shouldTimerDisplay==-1">
+                    <div class="bg-green fw-bold"> Coming Soon </div>
+                </t>
+                <t t-else="">
+                        <div><t t-out="state.days"/> : </div>
+                        <div><t t-out="state.hours"/> : </div>
+                        <div><t t-out="state.minutes"/> : </div>
+                        <div><t t-out="state.seconds"/> </div>
+                    </t>
             </div>
         </t>
     </t>

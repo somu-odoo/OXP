@@ -9,6 +9,7 @@ export class AuctionItem extends Component {
     setup() {
         super.setup();
         this.auctionItem = this.props.auctionItem;
+        this.startDate = moment(this.auctionItem.start_date, 'YYYY-MM-DD hh:mm:ss')
         this.endDate = moment(this.auctionItem.end_date, 'YYYY-MM-DD hh:mm:ss')
     }
 

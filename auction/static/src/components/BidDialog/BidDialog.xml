@@ -3,13 +3,20 @@
 
     <t t-name="web.BidDialog" owl="1">
         <Dialog title="'Place Bid'">
-            <div>
-                <div class="mt16 small">
-                    <input type="number" class="o_input" t-ref="bid_input"/>
+            <div class="col-8 d-flex">
+                <div class="col-4 text-700">
+                    <div>Owner Bid: </div>
+                    <div>Last Bid:</div>
+                    <div>Your Bid:</div>
+                </div>
+                <div class="col-4 text-500">
+                    <div t-out="props.price"/>
+                    <div t-out="props.latest_price"/>
+                    <input type="number" class="border-1" t-ref="bid_input" t-att-step="props.step" t-att-value="props.latest_price" width="20px"/>
                 </div>
             </div>
             <t t-set-slot="footer">
-                <button class="btn btn-primary" t-on-click="onConfirmBid">Confirm</button>
+                <button class="btn btn_warning fw-bold" t-on-click="onConfirmBid">Confirm</button>
             </t>
         </Dialog>
     </t>

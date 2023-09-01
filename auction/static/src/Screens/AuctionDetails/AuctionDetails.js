@@ -17,7 +17,11 @@ export class AuctionDetails extends Component {
 
     onPlaceBid(ev) {
         this.env.bus.trigger('add_dialog', { dialog: BidDialog, props: {
-            'title': 'Place Bid',
+            'owner': 'Manushi',
+            'price': this.auctionItem.bid_price,
+            'latest_price': this.auctionItem.current_bid_price,
+            'step': this.auctionItem.bid_increment_amount,
+            'is_bid_confirmed': this.auctionItem.is_bid_confirmed,
         }});
     }
 }

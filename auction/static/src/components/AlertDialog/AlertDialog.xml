@@ -9,7 +9,7 @@
                 </div>
             </div>
             <t t-set-slot="footer">
-                <button class="btn btn-primary" t-on-click="props.close">Close</button>
+                <button class="btn btn-warning" t-on-click="props.close">Close</button>
             </t>
         </Dialog>
     </t>

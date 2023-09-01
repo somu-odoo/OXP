@@ -60,8 +60,8 @@
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/sneaker4.png"/>
-            <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
-            <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="start_date" eval="(DateTime.today() - relativedelta(hours=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="end_date" eval="(DateTime.today() + relativedelta(hours=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
         <record id="auction_1_image_1" model="auction.auction.images">
             <field name="name">Front Side</field>
@@ -92,8 +92,8 @@
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/sneaker2.png"/>
-            <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
-            <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="start_date" eval="(DateTime.today() - relativedelta(days=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="end_date" eval="(DateTime.today() + relativedelta(days=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
         <record id="auction_2_image_1" model="auction.auction.images">
             <field name="name">Front Side</field>
@@ -109,8 +109,8 @@
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/sneaker3.png"/>
-            <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
-            <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="start_date" eval="(DateTime.today() - relativedelta(days=6)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="end_date" eval="(DateTime.today() - relativedelta(days=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
         <record id="auction_3_image_1" model="auction.auction.images">
             <field name="name">Front Side</field>
@@ -153,7 +153,7 @@
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/JackAndJones.png"/>
-            <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="start_date" eval="(DateTime.today() + relativedelta(days=5)).strftime('%Y-%m-%d %H:%M:%S')"/>
             <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
         <record id="auction_5_image_1" model="auction.auction.images">
@@ -245,8 +245,8 @@
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/Jeans-1-2.png"/>
-            <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
-            <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="start_date" eval="(DateTime.today() + relativedelta(days=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="end_date" eval="(DateTime.today() + relativedelta(days=7)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
         <record id="auction_9_image_1" model="auction.auction.images">
             <field name="name">Front Side</field>
@@ -290,7 +290,7 @@
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/Jacket2-1.png"/>
             <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
-            <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="end_date" eval="(DateTime.today() - relativedelta(days=6)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
         <record id="auction_11_image_1" model="auction.auction.images">
             <field name="name">Front Side</field>
@@ -343,8 +343,8 @@
             <field name="bid_price">5000</field>
             <field name="current_bid_price">5200</field>
             <field name="image_1920" type="base64" file="auction/static/images/Cap-1-1.png"/>
-            <field name="start_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
-            <field name="end_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="start_date" eval="(DateTime.today() - relativedelta(days=6)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="end_date" eval="(DateTime.today() - relativedelta(days=3)).strftime('%Y-%m-%d %H:%M:%S')"/>
         </record>
         <record id="auction_13_image_1" model="auction.auction.images">
             <field name="name">Front Side</field>
