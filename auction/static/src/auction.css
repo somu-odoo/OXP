@@ -51,3 +51,19 @@
     background: url(img/right.gif);
     background-repeat: no-repeat;
 }
+
+.text-500 {
+    color: #80848F !important;
+  }
+
+.text-600 {
+    color: rgba(95, 99, 111) !important;
+}
+
+.text-700 {
+    color: rgb(55, 65, 81) !important;
+}
+
+.btn_warning {
+    background: #ffc107;
+}
