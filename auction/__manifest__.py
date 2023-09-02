@@ -30,7 +30,10 @@
         'web.assets_backend': [
             'auction/static/src/backend/**/*',
         ],
-        'auction.assets_auction': [
+        'auction.assets_auction_main': [
+            'auction/static/src/main.js',
+        ],
+        'auction.assets_auction_without_main': [
             # bootstrap
             ('include', 'web._assets_helpers'),
             'web/static/src/scss/pre_variables.scss',
@@ -75,10 +78,20 @@
             'auction/static/src/core/**/*',
             'auction/static/src/Screens/**/*',
             'auction/static/src/utils/**/*',
-            'auction/static/src/main.js',
             'auction/static/src/auction.js',
             'auction/static/src/auction.xml',
             'auction/static/src/auction.css',
+        ],
+        'auction.assets_auction': [
+            ('include', 'auction.assets_auction_without_main'),
+            ('include', 'auction.assets_auction_main'),
+        ],
+        'auction.assets_auction_tests': [
+            ('include', 'auction.assets_auction_without_main'),
+
+            'web/static/lib/qunit/qunit-2.9.1.css',
+            'web/static/lib/qunit/qunit-2.9.1.js',
+            'auction/static/src/tests/**/*',
         ],
     }
 }
