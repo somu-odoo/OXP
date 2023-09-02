@@ -1,6 +1,6 @@
 <odoo>
     <data>
-          <template id="auction.root" name="Auction House">
+        <template id="auction.root" name="Auction House">
             <html>
                 <head>
                     <t t-call-assets="auction.assets_auction"/>
@@ -9,6 +9,19 @@
                 <body class="o_auction">
                 </body>
             </html>
-          </template>
+        </template>
+
+        <template id="auction.tests" name="Auction House Tests">
+            <html>
+                <head>
+                    <t t-call-assets="auction.assets_auction_tests"/>
+                    <link rel="stylesheet" src="auction/static/src/css/auction.css"/>
+                </head>
+                <body class="o_auction">
+                    <div id="qunit"></div>
+                    <div id="qunit-fixture"></div>
+                </body>
+            </html>
+        </template>
     </data>
 </odoo>

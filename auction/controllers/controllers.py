@@ -24,3 +24,7 @@ class OwlPlayground(http.Controller):
         data['auctionItems'] = auctionItems
         data['categories'] = categories
         return data
+
+    @http.route(['/tests'], type='http', auth='public')
+    def run_tests(self, **kw):
+        return request.render('auction.tests')
