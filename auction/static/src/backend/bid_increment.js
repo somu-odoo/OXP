@@ -25,7 +25,6 @@ export class FieldIncrement extends Component {
             refName: "incrementInteger",
             parse: (v) => parseInteger(v),
         });
-        // useNumpadDecimal();
     }
 
     get formattedValue() {

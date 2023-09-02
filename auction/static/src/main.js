@@ -3,6 +3,7 @@
 import { browser } from "@web/core/browser/browser";
 import { rpc } from "./core/rpc.js";
 import { DB } from "./core/db.js";
+import { parseHash } from "./utils/utils.js";
 import { App, mount, EventBus } from "@odoo/owl";
 import { templates } from "@web/core/assets";
 import { Auction } from "./auction";
@@ -18,16 +19,31 @@ owl.whenReady(async () => {
     const db = new DB();
     const env = { bus, db, rpc };
 
+    const translations = {};
+
+    const hash = parseHash();
+
+    if (hash.lang) {
+        const terms = {
+            "Search for the products you wanna bid!!": "Recherchez les produits auxquels vous souhaitez enchérir !!",
+            "All": "Toute",
+        };
+        Object.assign(translations, terms);
+    }
+
+    const translateFn = (str) => {
+        return translations[str] || str;
+    }
+
     env.activeMenuItem = 'live';
     const app = new App(Auction, {
         name: "Auction",
         env,
         templates,
+        translateFn,
         dev: true,
     });
     const root = await app.mount(document.body);
-
-    // mount(Auction, document.body, { templates, dev: true, env });
 });
 
 /**
