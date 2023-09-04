@@ -23,7 +23,7 @@ export class Timer extends Component {
         onMounted(() => {
             if (this.state.shouldTimerDisplay && this.state.shouldTimerDisplay != -1) {
                 const intervalId = setInterval(() => {
-                    duration = moment.duration(duration - 1000, 'milliseconds');
+                    duration = moment.duration(duration, 'milliseconds');
                     // Time Out check
                     if (duration.asSeconds() <= 0) {
                         clearInterval(intervalId);

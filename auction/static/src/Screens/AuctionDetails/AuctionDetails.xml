@@ -35,7 +35,7 @@
                     </div>
                     <div class="col-4 w-full px-5 flex flex-col flex-auto justify-between">
                         <div>
-                            <span class="text-600 uppercase mb-2 block">Jimmy Butler</span>
+                            <span class="text-600 uppercase mb-2 block" t-out="auctionItem.owner_name"/>
                             <h1 class="text-3xl font-header font-bold mb-4" t-out="auctionItem.name"/>
                             <p class="leading-relaxed" t-out="auctionItem.description"/>
                         </div>
