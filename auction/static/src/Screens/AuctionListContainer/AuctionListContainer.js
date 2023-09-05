@@ -4,7 +4,7 @@ import { Component, useState, onWillStart } from "@odoo/owl";
 import { AuctionList } from "./AuctionList";
 import { AuctionCategorySidebar } from "./AuctionCategorySidebar";
 import { registry } from "@web/core/registry";
-import { useFetchAuctions } from "../../core/db"
+import { useFetchAuctions } from "../../models/model"
 
 export class AuctionListContainer extends Component {
     static template = "auction.AuctionListContainer";
@@ -23,19 +23,19 @@ export class AuctionListContainer extends Component {
     async willStart() {
         this.datas = await this.auctionFetch();
         this.state.items = this.datas.auctionItems;
-        this.env.db.save('datas', this.datas);
+        this.env.auctionModel.save('datas', this.datas);
     }
 
     onChangeActiveMenu(ev) {
         const menuName = ev.detail.menu_name;
-        const filteredItems = this.env.db.filterAuctionItems(this.state.activeCategory, menuName);
+        const filteredItems = this.env.auctionModel.filterAuctionItems(this.state.activeCategory, menuName);
         this.state.items = filteredItems;
         this.state.activeMenuItem = menuName;
     }
 
     onFilterItems(ev) {
         const categoryID = ev.detail.id;
-        const filteredItems = this.env.db.filterAuctionItems(categoryID, this.state.activeMenuItem);
+        const filteredItems = this.env.auctionModel.filterAuctionItems(categoryID, this.state.activeMenuItem);
         this.state.items = filteredItems;
         this.state.activeCategory = categoryID;
     }

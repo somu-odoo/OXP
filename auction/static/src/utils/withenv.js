@@ -1,6 +1,6 @@
 /** @odoo-module **/
 
-import { Component, onError, xml, useSubEnv } from "@odoo/owl";
+import { Component, xml, useSubEnv } from "@odoo/owl";
 
 
 export class WithEnv extends Component {

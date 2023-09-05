@@ -77,6 +77,7 @@
             'auction/static/src/components/**/*',
             'auction/static/src/core/**/*',
             'auction/static/src/Screens/**/*',
+            'auction/static/src/models/**/*',
             'auction/static/src/utils/**/*',
             'auction/static/src/auction.js',
             'auction/static/src/demo.js',

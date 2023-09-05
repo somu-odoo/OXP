@@ -3,7 +3,7 @@
 import { EventBus, useEnv } from "@odoo/owl";
 
 
-export class DB extends EventBus {
+export class AuctionModel extends EventBus {
     constructor(params) {
         super();
         this.cache = {};

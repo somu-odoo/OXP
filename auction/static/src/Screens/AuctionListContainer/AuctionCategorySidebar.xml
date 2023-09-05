@@ -6,7 +6,9 @@
             <div class="auction_category active" data-id="all" t-on-click="onClickCategory">
                 <span class="category_selected" t-translation="off">All</span>
             </div>
-            <div t-foreach="props.categories" t-as="category" t-key="category.id" class="auction_category" t-att-data-id="category.id" t-on-click="onClickCategory">
+            <div t-foreach="props.categories" t-as="category" t-key="category.id"
+                class="auction_category" t-att-data-id="category.id"
+                t-on-click="onClickCategory">
                 <span class="category_selected" t-out="category.name"></span>
             </div>
         </div>

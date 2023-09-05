@@ -1,10 +1,11 @@
 /** @odoo-module **/
 
-import { Component, useState, onMounted, useRef, reactive, useExternalListener } from "@odoo/owl";
+import { Component, useState, reactive, useSubEnv } from "@odoo/owl";
 import { Header } from "./components/Header/header";
 import { Container } from "./components/Container/container";
 import { Footer } from "./components/Footer/footer";
 import { registry } from "@web/core/registry";
+import { AuctionModel } from "./models/model.js";
 
 import { AuctionListContainer } from "./Screens/AuctionListContainer/AuctionListContainer";
 import { DialogContainer } from "./components/dialog/dialog_container";
@@ -15,6 +16,8 @@ export class Auction extends Component {
 
     setup() {
         super.setup();
+        const auctionModel = new AuctionModel();
+        useSubEnv({auctionModel});
         this.mainScreen = useState({ name: 'AuctionList', component: AuctionListContainer });
         this.env.bus.addEventListener("change_screen", this.onChangeScreen.bind(this));
         this.env.bus.addEventListener("add_dialog", this.onAddDialog.bind(this));
