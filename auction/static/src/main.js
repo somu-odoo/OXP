@@ -2,7 +2,6 @@
 
 import { browser } from "@web/core/browser/browser";
 import { rpc } from "./core/rpc.js";
-// import { AuctionModel } from "./models/model.js";
 import { parseHash } from "./utils/utils.js";
 import { App, EventBus } from "@odoo/owl";
 import { templates } from "@web/core/assets";
@@ -34,7 +33,6 @@ owl.whenReady(async () => {
         return translations[str] || str;
     }
 
-    env.activeMenuItem = 'live';
     const app = new App(Auction, {
         name: "Auction",
         env,

@@ -2,7 +2,6 @@
 
 import { Component, useState, reactive, useSubEnv } from "@odoo/owl";
 import { Header } from "./components/Header/header";
-import { Container } from "./components/Container/container";
 import { Footer } from "./components/Footer/footer";
 import { registry } from "@web/core/registry";
 import { AuctionModel } from "./models/model.js";
@@ -18,10 +17,10 @@ export class Auction extends Component {
         super.setup();
         const auctionModel = new AuctionModel();
         useSubEnv({auctionModel});
-        this.mainScreen = useState({ name: 'AuctionList', component: AuctionListContainer });
+        this.mainScreen = useState({ name: 'AuctionList', component: AuctionListContainer, props: {} });
         this.env.bus.addEventListener("change_screen", this.onChangeScreen.bind(this));
         this.env.bus.addEventListener("add_dialog", this.onAddDialog.bind(this));
-        this.mainScreenProps = {};
+        this.env.bus.addEventListener("change_active_menu", this.onChangeScreen.bind(this));
 
         this.dialogs = reactive({});
         this.dialogId = 0;
@@ -31,7 +30,7 @@ export class Auction extends Component {
      * Used to give the `state.mobileSearchBarIsShown` value to main screen props
      */
     get mainScreenPropsFielded() {
-        return Object.assign({}, this.mainScreenProps);
+        return Object.assign({}, this.mainScreen.props);
     }
 
     onAddDialog(ev) {
@@ -54,17 +53,18 @@ export class Auction extends Component {
         };
         this.dialogs[id] = dialog;
     }
+
     /**
      * Called when main screen is changed
      * @param {Event} ev 
      */
     onChangeScreen(ev) {
         const screenRegistry = registry.category("screens");
-        const screen = screenRegistry.get(ev.detail.screen_name)
+        const screen = screenRegistry.get(ev.detail.screen_name);
         this.mainScreen.name = ev.detail.screen_name;
         this.mainScreen.component = screen;
-        this.mainScreenProps = { detail: ev.detail };
+        this.mainScreen.props = ev.detail;
     }
 }
 
-Auction.components = { Header, Container, Footer, DialogContainer, Demo }
+Auction.components = { Header, Footer, DialogContainer, Demo }

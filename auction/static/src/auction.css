@@ -17,6 +17,14 @@
     padding: 14px 16px;
 }
 
+.o_auction .o_container {
+    display: flex;
+}
+.o_auction .o_container > main {
+    flex: 1 0 auto;
+    width: 100%;
+}
+
 /* Style the search bar */
 .search-bar {
     float: right;

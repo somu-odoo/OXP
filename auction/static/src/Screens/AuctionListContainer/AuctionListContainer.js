@@ -1,6 +1,6 @@
 /** @odoo-module **/
 
-import { Component, useState, onWillStart } from "@odoo/owl";
+import { Component, useState, onWillStart, onWillUpdateProps } from "@odoo/owl";
 import { AuctionList } from "./AuctionList";
 import { AuctionCategorySidebar } from "./AuctionCategorySidebar";
 import { registry } from "@web/core/registry";
@@ -14,23 +14,19 @@ export class AuctionListContainer extends Component {
         this.state = useState({
             items: [],
             activeCategory: 'all',
-            activeMenuItem: 'live',
         });
         onWillStart(this.willStart);
         this.auctionFetch = useFetchAuctions();
-        this.env.bus.addEventListener("change_active_menu", this.onChangeActiveMenu.bind(this));
+        onWillUpdateProps((nextProps) => {
+            const filteredItems = this.env.auctionModel.filterAuctionItems(this.state.activeCategory, nextProps.activeMenuItem || 'all');
+            this.state.items = filteredItems;
+        });
     }
     async willStart() {
         this.datas = await this.auctionFetch();
-        this.state.items = this.datas.auctionItems;
         this.env.auctionModel.save('datas', this.datas);
-    }
-
-    onChangeActiveMenu(ev) {
-        const menuName = ev.detail.menu_name;
-        const filteredItems = this.env.auctionModel.filterAuctionItems(this.state.activeCategory, menuName);
+        const filteredItems = this.env.auctionModel.filterAuctionItems(this.state.activeCategory, this.props.activeMenuItem || 'all');
         this.state.items = filteredItems;
-        this.state.activeMenuItem = menuName;
     }
 
     onFilterItems(ev) {
