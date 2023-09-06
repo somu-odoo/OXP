@@ -4,10 +4,10 @@
     <t t-name="auction.menus" owl="1">
         <div class="navigation d-flex justify-content-center ms-1" t-ref="menu" t-on-menu-changed="onMenuChanged">
             <ul class="pt-1 p-3">
+                <MenuItem iconClass="'fa-home'" name="'all'" string="'All'" active="state.activeMenuItem === 'all' and true or false"/>
                 <MenuItem iconClass="'fa-hourglass-half'" name="'live'" string="'Live'" active="state.activeMenuItem === 'live' and true or false"/>
                 <MenuItem iconClass="'fa-hourglass-end'" name="'past'" string="'Past'" active="state.activeMenuItem === 'past' and true or false"/>
                 <MenuItem iconClass="'fa-hourglass-start'" name="'future'" string="'Future'" active="state.activeMenuItem === 'future' and true or false"/>
-                <MenuItem iconClass="'fa-star'" name="'favorites'" string="'Favorites'" active="state.activeMenuItem === 'favorites' and true or false"/>
             </ul>
         </div>
     </t>

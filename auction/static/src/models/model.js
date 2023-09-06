@@ -32,7 +32,9 @@ export class AuctionModel extends EventBus {
             });
         }
 
-        if (activeMenuItem === 'live') {
+        if (activeMenuItem === 'all') {
+            return filteredAuctionItems;
+        } else if (activeMenuItem === 'live') {
             filteredAuctionItems = filteredAuctionItems.filter((auction) => {
                 const endDate = moment(auction.end_date, 'YYYY-MM-DD hh:mm:ss');
                 const startDate = moment(auction.start_date, 'YYYY-MM-DD hh:mm:ss');
