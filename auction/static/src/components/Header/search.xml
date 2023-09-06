@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
-
     <t t-name="auction.search" owl="1">
-        <div class="bg-black w-full text-white mb-4">
-            <div class="d-flex flex-col p-3 w-full justify-content-center">
-                <span class="fw-bold text-capitalize text-center me-3">Search for the products you wanna bid!!</span>
-                <div class="bid_search">
-                    <input type="input" class="o_input_search" t-ref="search_input"/>
-                    <button class="p-1 ms-1 bg-warning"><i class="fa fa-search" t-on-click="onClickSearch"></i></button>
-                </div>
+        <div class="col-8 d-flex flex-col p-3 w-full justify-content-center">
+            <span class="fw-bold text-capitalize text-center me-3 mt-1 fs-5">Search for the products you wanna bid!!</span>
+            <div class="bid_search">
+                <input type="input" class="o_input_search" t-ref="search_input"/>
+                <i class="fa fa-search ms-2 fs-5 bg-warning p-2" t-on-click="onClickSearch"></i>
             </div>
         </div>
     </t>

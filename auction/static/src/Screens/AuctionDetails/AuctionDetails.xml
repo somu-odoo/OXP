@@ -7,7 +7,7 @@
                 <div class="mx-auto d-flex flex-wrap lg:flex-nowrap space-x-0 md:space-x-4">
                     <div class="col-2"></div>
                     <div class="card">
-                        <div class="w-full lg:h-auto">
+                        <div class="w-full lg:h-auto ">
                             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-indicators">
                                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -54,7 +54,7 @@
                             <Timer startDatetime="startDate" endDatetime="endDate" displayFullTimer="true"/>
                         </div>
                         <div class="mt-4">
-                            <button type="button" class="btn btn_warning fw-bold" t-on-click="onPlaceBid">Place Bid</button>
+                            <button type="button" class="btn btn_warning fw-bold place_bid" t-on-click="onPlaceBid">Place Bid</button>
                         </div>
                     </div>
                 </div>

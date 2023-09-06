@@ -9,12 +9,11 @@ export class BidDialog extends Component {
         const div = document.createElement('div');
         div.classList.add('o_bid_success');
         const image = document.createElement('image');
-        image.setAttribute('src', 'auction/static/images/right.gif');
         div.appendChild(image);
         document.body.appendChild(div);
         setTimeout(() => {
             div.remove();
-        }, 2000);
+        }, 5000);
         this.props.close();
     }
 }
