@@ -60,6 +60,11 @@
                 </div>
                 <div class="mt-5">
                     <h1 class="text-600">Related Products:</h1>
+                    <div class="row">
+                        <t t-foreach="relatedProducts" t-as="auctionItem" t-key="auctionItem.id">
+                            <AuctionItem auctionItem="auctionItem"/>
+                        </t>
+                    </div>
                 </div>
             </div>
         </div>

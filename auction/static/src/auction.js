@@ -8,6 +8,7 @@ import { registry } from "@web/core/registry";
 
 import { AuctionListContainer } from "./Screens/AuctionListContainer/AuctionListContainer";
 import { DialogContainer } from "./components/dialog/dialog_container";
+import { Demo } from "./demo";
 
 export class Auction extends Component {
     static template = "auction.root";
@@ -63,4 +64,4 @@ export class Auction extends Component {
     }
 }
 
-Auction.components = { Header, Container, Footer, DialogContainer }
+Auction.components = { Header, Container, Footer, DialogContainer, Demo }
