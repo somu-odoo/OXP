@@ -13,7 +13,7 @@ export class AuctionDetails extends Component {
     setup() {
         super.setup();
         this.auctionItem = this.props.auctionItem;
-        this.auctionItems = this.env.db.load('datas').auctionItems;
+        this.auctionItems = this.env.auctionModel.load('datas').auctionItems;
         this.relatedProducts = this.auctionItems.filter(item => (item.categ_id).toString() === (this.auctionItem.categ_id).toString());
         this.relatedProducts = this.relatedProducts.length > 4 ? this.relatedProducts.slice(0, 4) : this.relatedProducts;
         this.endDate = moment(this.auctionItem.end_date, 'YYYY-MM-DD hh:mm:ss');
