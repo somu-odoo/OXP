@@ -2,7 +2,7 @@
 <templates xml:space="preserve">
 
     <t t-name="auction.header" owl="1">
-        <div class="d-flex col-12 bg-black w-full text-white">
+        <div class="o_auction_header d-flex col-12 bg-black w-full text-white">
             <div class="col-2">
                 <img t-attf-src="auction/static/images/AUC.png" class="w-50" loading="lazy" t-on-click="onClickLogo"/>
             </div>
