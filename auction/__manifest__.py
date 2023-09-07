@@ -79,6 +79,7 @@
             'auction/static/src/Screens/**/*',
             'auction/static/src/utils/**/*',
             'auction/static/src/auction.js',
+            'auction/static/src/demo.js',
             'auction/static/src/auction.xml',
             'auction/static/src/auction.css',
         ],

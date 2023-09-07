@@ -28,6 +28,7 @@
                         <group>
                             <group>
                                 <field name="name"/>
+                                <field name="owner_name"/>
                                 <field name="bidder_id"/>
                                 <field name="brand_id"/>
                                 <field name="categ_id"/>
@@ -36,6 +37,7 @@
                                 <field name="bid_increment_amount"/>
                                 <field name="bid_price"/>
                                 <field name="current_bid_price" widget="increment" options="{'increment_field': 'bid_increment_amount'}"/>
+                                <field name="start_date"/>
                                 <field name="end_date"/>
                             </group>
                         </group>

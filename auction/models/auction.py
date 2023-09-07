@@ -28,6 +28,7 @@ class Auction(models.Model):
     currency_id = fields.Many2one('res.currency', string='Auction Currency', tracking=True, default=lambda self: self.env.company.currency_id)
     start_date = fields.Datetime("Start Date", required=True)
     end_date = fields.Datetime("End Date", required=True)
+    owner_name = fields.Char()
 
 class AuctionImages(models.Model):
     _name = "auction.auction.images"

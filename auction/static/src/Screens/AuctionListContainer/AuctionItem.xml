@@ -13,7 +13,7 @@
                         <div class="prod_desc">
                             <h3 class="bid_title"><t t-out="props.auctionItem.name"/></h3>
                             <p class="bid_desc" t-out="props.auctionItem.description"/>
-                            <p class="bid_name">Manushi Shah</p>
+                            <p class="bid_name" t-out="props.auctionItem.owner_name"/>
                             <p class="bid_price"><b>₹<span t-out="props.auctionItem.bid_price"></span></b></p>
                             <button class="btn_bid_details">Bid Details</button>
                             <i>

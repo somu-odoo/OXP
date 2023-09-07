@@ -7,6 +7,7 @@
             <Container tname="mainScreen.name" component="mainScreen.component" mainScreenProps="mainScreenPropsFielded"/>
             <Footer/>
             <DialogContainer dialogs="dialogs"/>
+            <!-- <Demo /> -->
         </div>
     </t>
 </templates>
