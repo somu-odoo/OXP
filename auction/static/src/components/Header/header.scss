@@ -6,6 +6,7 @@
 
 .o_auction_header img {
     cursor: pointer;
+    height: 65px;
 }
 
 .bid_tabs {
@@ -22,7 +23,8 @@
     float: right;
 
     input {
-        width: 380px;
+        height: 36px;
+        width: 20vw;
         padding: 6px 15px;
         margin-top: 8px;
         font-size: 17px;
@@ -31,6 +33,7 @@
     }
 
     button {
+        height: 36px;
         float: right;
         padding: 10px 15px;
         margin-top: 8px;

@@ -20,7 +20,7 @@ export class MenuItem extends Component {
     }
     onChangeMenu(nextProps) {
         // To Implement props change method
-        console.log(nextProps)
+        console.log('Calling custom method on props change');
     }
 }
 
