@@ -14,6 +14,26 @@
     color: #000;  
 }
 
-.o_input_search {
-    height: 40px;
+.search-container {
+    float: right;
+
+    input {
+        width: 380px;
+        padding: 6px 15px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        border-radius: 8px 0 0 8px;
+    }
+
+    button {
+        float: right;
+        padding: 10px 15px;
+        margin-top: 8px;
+        background: #ffffff;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+        border-radius: 0 8px 8px 0;
+    }
 }
