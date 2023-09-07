@@ -1,6 +1,7 @@
 /** @odoo-module **/
 
-import { Component, useExternalListener, useRef, useChildSubEnv, useState } from "@odoo/owl";
+import { Component, useExternalListener, useRef } from "@odoo/owl";
+
 export class Dialog extends Component {
     setup() {
         this.data = this.env.dialogData;
@@ -16,6 +17,7 @@ export class Dialog extends Component {
     }
 }
 Dialog.template = "web.Dialog";
+
 Dialog.props = {
     contentClass: { type: String, optional: true },
     bodyClass: { type: String, optional: true },

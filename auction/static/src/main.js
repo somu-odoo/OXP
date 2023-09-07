@@ -2,9 +2,8 @@
 
 import { browser } from "@web/core/browser/browser";
 import { rpc } from "./core/rpc.js";
-import { DB } from "./core/db.js";
 import { parseHash } from "./utils/utils.js";
-import { App, mount, EventBus } from "@odoo/owl";
+import { App, EventBus } from "@odoo/owl";
 import { templates } from "@web/core/assets";
 import { Auction } from "./auction";
 
@@ -16,8 +15,7 @@ import { Auction } from "./auction";
 
 owl.whenReady(async () => {
     const bus = new EventBus();
-    const db = new DB();
-    const env = { bus, db, rpc };
+    const env = { bus, rpc };
 
     const translations = {};
 
@@ -35,7 +33,6 @@ owl.whenReady(async () => {
         return translations[str] || str;
     }
 
-    env.activeMenuItem = 'live';
     const app = new App(Auction, {
         name: "Auction",
         env,

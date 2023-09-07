@@ -3,7 +3,7 @@
 
     <t t-name="auction.footer" owl="1">
         <footer class="o_footer position-fixed bottom-0">
-            <Menus />
+            <Menus activeMenuItem="props.activeMenuItem"/>
             <!-- <div class="text-center bg-black text-white">© 2023 Odoo S.A. All Rights Reserved</div> -->
         </footer>
     </t>

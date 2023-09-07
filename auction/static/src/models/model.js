@@ -3,7 +3,7 @@
 import { EventBus, useEnv } from "@odoo/owl";
 
 
-export class DB extends EventBus {
+export class AuctionModel extends EventBus {
     constructor(params) {
         super();
         this.cache = {};
@@ -32,7 +32,9 @@ export class DB extends EventBus {
             });
         }
 
-        if (activeMenuItem === 'live') {
+        if (activeMenuItem === 'all') {
+            return filteredAuctionItems;
+        } else if (activeMenuItem === 'live') {
             filteredAuctionItems = filteredAuctionItems.filter((auction) => {
                 const endDate = moment(auction.end_date, 'YYYY-MM-DD hh:mm:ss');
                 const startDate = moment(auction.start_date, 'YYYY-MM-DD hh:mm:ss');

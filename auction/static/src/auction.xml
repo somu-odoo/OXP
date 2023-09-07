@@ -4,8 +4,12 @@
     <t t-name="auction.root" owl="1">
         <div class="overflow-hidden">
             <Header/>
-            <Container tname="mainScreen.name" component="mainScreen.component" mainScreenProps="mainScreenPropsFielded"/>
-            <Footer/>
+            <div class="o_container">
+                <main>
+                    <t t-component="mainScreen.component" t-props="mainScreenPropsFielded" t-key="mainScreen.name" />
+                </main>
+            </div>
+            <Footer activeMenuItem="mainScreenPropsFielded.activeMenuItem or 'all'"/>
             <DialogContainer dialogs="dialogs"/>
             <!-- <Demo /> -->
         </div>

@@ -3,7 +3,7 @@
 import { App, EventBus } from "@odoo/owl";
 import { templates } from "@web/core/assets";
 import { rpc } from "../../core/rpc.js";
-import { DB } from "../../core/db.js";
+import { AuctionModel } from "../../models/model.js";
 import { parseSearchQuery } from "../../utils/utils.js";
 import { AuctionCategorySidebar } from "../../Screens/AuctionListContainer/AuctionCategorySidebar";
 
@@ -15,7 +15,7 @@ import { AuctionCategorySidebar } from "../../Screens/AuctionListContainer/Aucti
 let target;
 let app;
 let bus;
-let db;
+let auctionModel;
 let env;
 
 function prepareTarget(debug = false) {
@@ -34,8 +34,8 @@ QUnit.module('CategorySidebar', (hooks) => {
         const hashQuery = parseSearchQuery(search);
         target = prepareTarget(hashQuery.debug);
         bus = new EventBus();
-        db = new DB();
-        env = { bus, db, rpc };
+        auctionModel = new AuctionModel();
+        env = { bus, auctionModel, rpc };
     });
     hooks.afterEach(async () => {
         app.destroy();
@@ -53,9 +53,8 @@ QUnit.module('CategorySidebar', (hooks) => {
         });
         const categorySidebar = await app.mount(target);
         await nextTick();
-        debugger;
         const elements = document.querySelectorAll('.auction_category');
-        assert.ok(elements.length, 3, "should have o_content class");
+        assert.strictEqual(elements.length, 3, "should have o_content class");
 
     });
 

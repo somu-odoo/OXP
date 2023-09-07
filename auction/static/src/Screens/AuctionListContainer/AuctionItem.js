@@ -15,7 +15,7 @@ export class AuctionItem extends Component {
 
     onClickItem(ev) {
         const id = ev.currentTarget.getAttribute('data-id');
-        const auction = this.env.db.getAuctionItem(parseInt(id))
+        const auction = this.env.auctionModel.getAuctionItem(parseInt(id))
         this.env.bus.trigger('change_screen', { 'screen_name': 'AuctionDetails', auctionItem: this.auctionItem });
     }
 }

@@ -2,6 +2,8 @@
 
 import { Component, onWillUpdateProps, useRef, useState } from "@odoo/owl";
 
+// TODO: MSH: Menus are part of footer so it should be inside footer component
+
 export class MenuItem extends Component {
     static template = "auction.menuItem";
 
@@ -12,9 +14,9 @@ export class MenuItem extends Component {
 
     onActivateMenu(ev) {
         const menuName = ev.currentTarget.getAttribute('data-name');
-        const customEvent = new CustomEvent("menu-changed", { bubbles: true, detail: { menu_name: menuName } });
+        const customEvent = new CustomEvent("menu-changed", { bubbles: true, detail: { activeMenuItem: menuName } });
         this.menuItemRef.el.dispatchEvent(customEvent);
-        this.env.bus.trigger('change_active_menu', { menu_name: menuName });
+        this.env.bus.trigger('change_active_menu', { 'screen_name': 'AuctionList', activeMenuItem: menuName });
     }
     onChangeMenu(nextProps) {
         // To Implement props change method
@@ -28,11 +30,11 @@ export class Menus extends Component {
 
     setup() {
         this.menuRef = useRef('menu');
-        this.state = useState({ activeMenuItem: this.env.activeMenuItem });
+        this.state = useState({ activeMenuItem: this.props.activeMenuItem });
     }
 
     onMenuChanged(ev) {
-        this.state.activeMenuItem = ev.detail.menu_name
+        this.state.activeMenuItem = ev.detail.activeMenuItem
     }
 }
 
